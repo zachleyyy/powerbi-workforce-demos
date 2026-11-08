@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "00000000000000009c4c",
+  "position": {
+    "x": 18,
+    "y": 572,
+    "z": 11000,
+    "height": 80,
+    "width": 264,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Employee Type"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Employee Type",
+              "nativeQueryRef": "Employee Type"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

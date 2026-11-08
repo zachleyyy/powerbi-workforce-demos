@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "00000000000000002723",
+  "position": {
+    "x": 1468.741271165089,
+    "y": 79.77189012717737,
+    "z": 3000,
+    "height": 114.96537106563797,
+    "width": 396.5132185733228,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Net HC Change"
+                }
+              },
+              "queryRef": "Audit_Data.Net HC Change",
+              "nativeQueryRef": "Net HC Change"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Net HC Change %"
+                }
+              },
+              "queryRef": "Audit_Data.Net HC Change %",
+              "nativeQueryRef": "Net HC Change %"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

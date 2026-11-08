@@ -1,0 +1,94 @@
+table Fact_RequiredHC_Latest
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 7e0e4cfd-ee64-49a1-81b9-8b6f85b77d1d
+			defaultHierarchy: LocalDateTable_a01968b4-7c0a-4b46-a3d0-7f567bee6a5d.'Date Hierarchy'
+
+	column SiteKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteKey
+
+	column RequirementArea_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RequirementArea_Source
+
+	column SourceQuarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SourceQuarter
+
+	column FiscalQuarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+
+	column RequiredHC
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: RequiredHC
+
+	column PlanSnapshotDate
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: PlanSnapshotDate
+
+		variation Variation
+			isDefault
+			relationship: cd401ae5-579e-43ef-a661-d85d6c481723
+			defaultHierarchy: LocalDateTable_65854874-c34b-4ac8-b5f5-456b8eab797e.'Date Hierarchy'
+
+	column SourceWorkbook
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SourceWorkbook
+
+	column SourceSheet
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SourceSheet
+
+	column HODMappingStatus
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODMappingStatus
+
+
+	partition Fact_RequiredHC_Latest = m
+		mode: import
+		source =
+			#table(type table [#"Date" = datetime, #"SiteKey" = text, #"RequirementArea_Source" = text, #"SourceQuarter" = text, #"FiscalQuarter" = text, #"RequiredHC" = number, #"PlanSnapshotDate" = datetime, #"SourceWorkbook" = text, #"SourceSheet" = text, #"HODMappingStatus" = text], {
+				{#datetime(2025,1,1,0,0,0), "S1", "Synthetic demo", "Q1-25", "2025 Q1", 37.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,1,1,0,0,0), "S2", "Synthetic demo", "Q1-25", "2025 Q1", 38.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,1,1,0,0,0), "S3", "Synthetic demo", "Q1-25", "2025 Q1", 39.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,4,1,0,0,0), "S1", "Synthetic demo", "Q2-25", "2025 Q2", 38.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,4,1,0,0,0), "S2", "Synthetic demo", "Q2-25", "2025 Q2", 39.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,4,1,0,0,0), "S3", "Synthetic demo", "Q2-25", "2025 Q2", 40.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,7,1,0,0,0), "S1", "Synthetic demo", "Q3-25", "2025 Q3", 39.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,7,1,0,0,0), "S2", "Synthetic demo", "Q3-25", "2025 Q3", 40.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,7,1,0,0,0), "S3", "Synthetic demo", "Q3-25", "2025 Q3", 41.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,10,1,0,0,0), "S1", "Synthetic demo", "Q4-25", "2025 Q4", 40.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,10,1,0,0,0), "S2", "Synthetic demo", "Q4-25", "2025 Q4", 41.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2025,10,1,0,0,0), "S3", "Synthetic demo", "Q4-25", "2025 Q4", 42.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,1,1,0,0,0), "S1", "Synthetic demo", "Q1-26", "2026 Q1", 37.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,1,1,0,0,0), "S2", "Synthetic demo", "Q1-26", "2026 Q1", 38.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,1,1,0,0,0), "S3", "Synthetic demo", "Q1-26", "2026 Q1", 39.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,4,1,0,0,0), "S1", "Synthetic demo", "Q2-26", "2026 Q2", 38.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,4,1,0,0,0), "S2", "Synthetic demo", "Q2-26", "2026 Q2", 39.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,4,1,0,0,0), "S3", "Synthetic demo", "Q2-26", "2026 Q2", 40.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,7,1,0,0,0), "S1", "Synthetic demo", "Q3-26", "2026 Q3", 39.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,7,1,0,0,0), "S2", "Synthetic demo", "Q3-26", "2026 Q3", 40.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,7,1,0,0,0), "S3", "Synthetic demo", "Q3-26", "2026 Q3", 41.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,10,1,0,0,0), "S1", "Synthetic demo", "Q4-26", "2026 Q4", 40.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,10,1,0,0,0), "S2", "Synthetic demo", "Q4-26", "2026 Q4", 41.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"},
+				{#datetime(2026,10,1,0,0,0), "S3", "Synthetic demo", "Q4-26", "2026 Q4", 42.0, #datetime(2026,6,30,0,0,0), "Synthetic demo", "Synthetic demo", "Synthetic demo"}
+			})

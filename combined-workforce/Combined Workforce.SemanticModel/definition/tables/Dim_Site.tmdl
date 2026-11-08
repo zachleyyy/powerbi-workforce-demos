@@ -1,0 +1,32 @@
+table Dim_Site
+
+	column SiteKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteKey
+
+	column Site
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Site
+
+	column SiteDescription
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteDescription
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+
+	partition Dim_Site = m
+		mode: import
+		source =
+			#table(type table [#"SiteKey" = text, #"Site" = text, #"SiteDescription" = text, #"SortOrder" = Int64.Type], {
+				{"S1", "Demo Site 1", "Synthetic location 1", 1},
+				{"S2", "Demo Site 2", "Synthetic location 2", 2},
+				{"S3", "Demo Site 3", "Synthetic location 3", 3}
+			})

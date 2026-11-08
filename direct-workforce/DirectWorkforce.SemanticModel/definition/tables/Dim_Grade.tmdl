@@ -1,0 +1,27 @@
+table Dim_Grade
+	column GradeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeKey
+
+	column Grade
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+	partition Dim_Grade = m
+		mode: import
+		source =
+			#table(type table [#"GradeKey" = nullable text, #"Grade" = nullable text, #"SortOrder" = nullable (Int64.Type)], {
+				{"G1", "Grade 2", 1},
+				{"G2", "Grade 3", 2},
+				{"G3", "Grade 4", 3},
+				{"G4", "Grade 1", 4}
+			})
+

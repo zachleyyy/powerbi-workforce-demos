@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "cc535613c24e4a8f9f96",
+  "position": {
+    "x": 326,
+    "y": 98,
+    "z": 3000,
+    "height": 108,
+    "width": 296,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Closing HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Closing HC",
+              "nativeQueryRef": "Reviewed Closing HC"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Audit_Data"
+                  }
+                },
+                "Property": "Reviewed Closing HC"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  }
+}

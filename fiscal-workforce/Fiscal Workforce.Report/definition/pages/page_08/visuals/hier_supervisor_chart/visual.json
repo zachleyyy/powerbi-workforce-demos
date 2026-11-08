@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "hier_supervisor_chart",
+  "position": {
+    "x": 1358,
+    "y": 382,
+    "z": 19000,
+    "height": 470,
+    "width": 502,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Supervisor"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Supervisor",
+              "nativeQueryRef": "Supervisor"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Opening HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Opening HC",
+              "nativeQueryRef": "Reviewed Opening HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Average HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Average HC",
+              "nativeQueryRef": "Reviewed Average HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Eligible Exits"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Eligible Exits",
+              "nativeQueryRef": "Reviewed Eligible Exits"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Rate"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Rate",
+              "nativeQueryRef": "Reviewed Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Conversion Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Conversion Events",
+              "nativeQueryRef": "Reviewed Conversion Events"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Review Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Review Events",
+              "nativeQueryRef": "Reviewed Review Events"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Hierarchy Selection Context"
+                }
+              },
+              "queryRef": "Audit_Data.Hierarchy Selection Context",
+              "nativeQueryRef": "Hierarchy Selection Context"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Closing HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Closing HC",
+              "nativeQueryRef": "Reviewed Closing HC"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Audit_Data"
+                  }
+                },
+                "Property": "Reviewed Closing HC"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    }
+  }
+}

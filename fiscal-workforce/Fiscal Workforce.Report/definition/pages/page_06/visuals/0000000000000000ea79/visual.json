@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "0000000000000000ea79",
+  "position": {
+    "x": 326,
+    "y": 936,
+    "z": 21000,
+    "height": 430,
+    "width": 1534,
+    "tabOrder": 21000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Date"
+                    }
+                  },
+                  "Property": "FiscalMonthLabel"
+                }
+              },
+              "queryRef": "Dim_Date.FiscalMonthLabel",
+              "nativeQueryRef": "FiscalMonthLabel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Movement"
+                }
+              },
+              "queryRef": "Audit_Data.Movement",
+              "nativeQueryRef": "Movement"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Repeated Event Movement Rows"
+                }
+              },
+              "queryRef": "Audit_Data.Repeated Event Movement Rows",
+              "nativeQueryRef": "Repeated Event Movement Rows"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

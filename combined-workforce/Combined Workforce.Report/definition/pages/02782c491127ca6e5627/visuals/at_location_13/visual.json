@@ -1,0 +1,161 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "at_location_13",
+  "position": {
+    "x": 638,
+    "y": 218,
+    "z": 9000,
+    "height": 210,
+    "width": 625,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "lineClusteredColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Site"
+                    }
+                  },
+                  "Property": "Site"
+                }
+              },
+              "queryRef": "DemoField_e781d6925d68",
+              "active": true,
+              "displayName": "Synthetic demo"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_NationalityGroup"
+                    }
+                  },
+                  "Property": "NationalityGroup"
+                }
+              },
+              "queryRef": "DemoField_59db63937a48",
+              "displayName": "Synthetic demo"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Beginning Headcount"
+                }
+              },
+              "queryRef": "DemoField_f3a97a97713a",
+              "displayName": "Synthetic demo",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Ending Headcount"
+                }
+              },
+              "queryRef": "DemoField_936c08e8c3cd",
+              "displayName": "Synthetic demo",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Average Headcount"
+                }
+              },
+              "queryRef": "DemoField_b4541200f524",
+              "displayName": "Synthetic demo",
+              "format": "0"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Terminated Employees"
+                }
+              },
+              "queryRef": "DemoField_b26407715047",
+              "displayName": "Synthetic demo",
+              "format": "0"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Attrition Rate"
+                }
+              },
+              "queryRef": "DemoField_a6f13bac9d73",
+              "displayName": "Synthetic demo",
+              "format": "0.00%"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Terminated Employees"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "00000000000000004e33",
+  "position": {
+    "x": 584,
+    "y": 98,
+    "z": 3000,
+    "height": 108,
+    "width": 244,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Joiners"
+                }
+              },
+              "queryRef": "Audit_Data.Joiners",
+              "nativeQueryRef": "Joiners"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

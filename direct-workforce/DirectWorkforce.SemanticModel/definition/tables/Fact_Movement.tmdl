@@ -1,0 +1,99 @@
+table Fact_Movement
+	column EventDate
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: EventDate
+
+	column EventType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EventType
+
+	column EmployeeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column EmployeeCode_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeCode_Source
+
+	column GradeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeKey
+
+	column SiteKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteKey
+
+	column HODKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODKey
+
+	column GradeCode_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeCode_Source
+
+	column Location_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Location_Source
+
+	column HODName_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODName_Source
+
+	column Department_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Department_Source
+
+	column ActiveStatus_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ActiveStatus_Source
+
+	column DirectIndirect_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DirectIndirect_Source
+
+	column EmployeeName_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeName_Source
+
+	partition Fact_Movement = m
+		mode: import
+		source =
+			#table(type table [#"EventDate" = nullable datetime, #"EventType" = nullable text, #"EmployeeKey" = nullable text, #"EmployeeCode_Source" = nullable text, #"GradeKey" = nullable text, #"SiteKey" = nullable text, #"HODKey" = nullable text, #"GradeCode_Source" = nullable text, #"Location_Source" = nullable text, #"HODName_Source" = nullable text, #"Department_Source" = nullable text, #"ActiveStatus_Source" = nullable text, #"DirectIndirect_Source" = nullable text, #"EmployeeName_Source" = nullable text], {
+				{#datetime(2026, 2, 5, 0, 0, 0), "Joiner", "4", "4", "G4", "SITE-01", "TEAM-04", "G4", "SITE-01", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 004"},
+				{#datetime(2026, 3, 12, 0, 0, 0), "Exit", "5", "5", "G1", "SITE-02", "TEAM-01", "G1", "SITE-02", "TEAM-01", "Demo Department 02", "Inactive", "DIRECT DL", "Demo Worker 005"},
+				{#datetime(2026, 3, 9, 0, 0, 0), "Joiner", "8", "8", "G4", "SITE-02", "TEAM-04", "G4", "SITE-02", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 008"},
+				{#datetime(2026, 2, 17, 0, 0, 0), "Exit", "10", "10", "G2", "SITE-01", "TEAM-02", "G2", "SITE-01", "TEAM-02", "Demo Department 03", "Inactive", "DIRECT DL", "Demo Worker 010"},
+				{#datetime(2026, 1, 13, 0, 0, 0), "Joiner", "12", "12", "G4", "SITE-03", "TEAM-04", "G4", "SITE-03", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 012"},
+				{#datetime(2026, 1, 22, 0, 0, 0), "Exit", "15", "15", "G3", "SITE-03", "TEAM-03", "G3", "SITE-03", "TEAM-03", "Demo Department 04", "Inactive", "DIRECT DL", "Demo Worker 015"},
+				{#datetime(2026, 2, 17, 0, 0, 0), "Joiner", "16", "16", "G4", "SITE-01", "TEAM-04", "G4", "SITE-01", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 016"},
+				{#datetime(2026, 3, 21, 0, 0, 0), "Joiner", "20", "20", "G4", "SITE-02", "TEAM-04", "G4", "SITE-02", "TEAM-04", "Demo Department 01", "Inactive", "DIRECT DL", "Demo Worker 020"},
+				{#datetime(2026, 3, 26, 0, 0, 0), "Exit", "20", "20", "G4", "SITE-02", "TEAM-04", "G4", "SITE-02", "TEAM-04", "Demo Department 01", "Inactive", "DIRECT DL", "Demo Worker 020"},
+				{#datetime(2026, 1, 25, 0, 0, 0), "Joiner", "24", "24", "G4", "SITE-03", "TEAM-04", "G4", "SITE-03", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 024"},
+				{#datetime(2026, 2, 12, 0, 0, 0), "Exit", "25", "25", "G1", "SITE-01", "TEAM-01", "G1", "SITE-01", "TEAM-01", "Demo Department 02", "Inactive", "DIRECT DL", "Demo Worker 025"},
+				{#datetime(2026, 2, 4, 0, 0, 0), "Joiner", "28", "28", "G4", "SITE-01", "TEAM-04", "G4", "SITE-01", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 028"},
+				{#datetime(2026, 1, 17, 0, 0, 0), "Exit", "30", "30", "G2", "SITE-03", "TEAM-02", "G2", "SITE-03", "TEAM-02", "Demo Department 03", "Inactive", "DIRECT DL", "Demo Worker 030"},
+				{#datetime(2026, 3, 8, 0, 0, 0), "Joiner", "32", "32", "G4", "SITE-02", "TEAM-04", "G4", "SITE-02", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 032"},
+				{#datetime(2026, 3, 22, 0, 0, 0), "Exit", "35", "35", "G3", "SITE-02", "TEAM-03", "G3", "SITE-02", "TEAM-03", "Demo Department 04", "Inactive", "DIRECT DL", "Demo Worker 035"},
+				{#datetime(2026, 1, 12, 0, 0, 0), "Joiner", "36", "36", "G4", "SITE-03", "TEAM-04", "G4", "SITE-03", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 036"},
+				{#datetime(2026, 2, 16, 0, 0, 0), "Joiner", "40", "40", "G4", "SITE-01", "TEAM-04", "G4", "SITE-01", "TEAM-04", "Demo Department 01", "Inactive", "DIRECT DL", "Demo Worker 040"},
+				{#datetime(2026, 2, 21, 0, 0, 0), "Exit", "40", "40", "G4", "SITE-01", "TEAM-04", "G4", "SITE-01", "TEAM-04", "Demo Department 01", "Inactive", "DIRECT DL", "Demo Worker 040"},
+				{#datetime(2026, 3, 20, 0, 0, 0), "Joiner", "44", "44", "G4", "SITE-02", "TEAM-04", "G4", "SITE-02", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 044"},
+				{#datetime(2026, 1, 12, 0, 0, 0), "Exit", "45", "45", "G1", "SITE-03", "TEAM-01", "G1", "SITE-03", "TEAM-01", "Demo Department 02", "Inactive", "DIRECT DL", "Demo Worker 045"},
+				{#datetime(2026, 1, 24, 0, 0, 0), "Joiner", "48", "48", "G4", "SITE-03", "TEAM-04", "G4", "SITE-03", "TEAM-04", "Demo Department 01", "Active", "DIRECT DL", "Demo Worker 048"}
+			})
+

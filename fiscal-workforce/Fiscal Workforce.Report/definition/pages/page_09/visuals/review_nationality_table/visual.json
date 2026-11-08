@@ -1,0 +1,127 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "review_nationality_table",
+  "position": {
+    "x": 326,
+    "y": 1220,
+    "z": 2000,
+    "height": 275,
+    "width": 1534,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Nationality_Group"
+                    }
+                  },
+                  "Property": "Nationality Group"
+                }
+              },
+              "active": true,
+              "queryRef": "Dim_Nationality_Group.Nationality Group",
+              "nativeQueryRef": "Nationality Group"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Opening HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Opening HC",
+              "nativeQueryRef": "Reviewed Opening HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Closing HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Closing HC",
+              "nativeQueryRef": "Reviewed Closing HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Average HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Average HC",
+              "nativeQueryRef": "Reviewed Average HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Eligible Exits"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Eligible Exits",
+              "nativeQueryRef": "Reviewed Eligible Exits"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Rate"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Rate",
+              "nativeQueryRef": "Reviewed Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Review Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Review Events",
+              "nativeQueryRef": "Reviewed Review Events"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

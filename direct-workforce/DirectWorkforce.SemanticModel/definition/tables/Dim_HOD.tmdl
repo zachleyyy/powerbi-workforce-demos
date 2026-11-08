@@ -1,0 +1,26 @@
+table Dim_HOD
+	column HODKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODKey
+
+	column HODCode
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODCode
+
+	column HODName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODName
+
+	partition Dim_HOD = m
+		mode: import
+		source =
+			#table(type table [#"HODKey" = nullable text, #"HODCode" = nullable text, #"HODName" = nullable text], {
+				{"TEAM-01", "TEAM-01", "TEAM-01"},
+				{"TEAM-02", "TEAM-02", "TEAM-02"},
+				{"TEAM-03", "TEAM-03", "TEAM-03"},
+				{"TEAM-04", "TEAM-04", "TEAM-04"}
+			})
+

@@ -1,0 +1,163 @@
+table Dim_Employee_Latest
+
+	column EmployeeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column EmployeeName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeName
+
+	column GradeCode
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeCode
+
+	column Location
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Location
+
+	column HOD_Name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HOD_Name
+
+	column Department
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Department
+
+	column ActiveStatus
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ActiveStatus
+
+
+	partition Dim_Employee_Latest = m
+		mode: import
+		source =
+			#table(type table [#"EmployeeKey" = text, #"EmployeeName" = text, #"GradeCode" = text, #"Location" = text, #"HOD_Name" = text, #"Department" = text, #"ActiveStatus" = text], {
+				{"1", "Demo Person 001", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"2", "Demo Person 002", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"3", "Demo Person 003", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"4", "Demo Person 004", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"5", "Demo Person 005", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"6", "Demo Person 006", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"7", "Demo Person 007", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"8", "Demo Person 008", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"9", "Demo Person 009", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"10", "Demo Person 010", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"11", "Demo Person 011", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"12", "Demo Person 012", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"13", "Demo Person 013", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"14", "Demo Person 014", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"15", "Demo Person 015", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"16", "Demo Person 016", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"17", "Demo Person 017", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"18", "Demo Person 018", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"19", "Demo Person 019", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"20", "Demo Person 020", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"21", "Demo Person 021", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"22", "Demo Person 022", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"23", "Demo Person 023", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"24", "Demo Person 024", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"25", "Demo Person 025", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"26", "Demo Person 026", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"27", "Demo Person 027", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"28", "Demo Person 028", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Inactive"},
+				{"29", "Demo Person 029", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Inactive"},
+				{"30", "Demo Person 030", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Inactive"},
+				{"31", "Demo Person 031", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"32", "Demo Person 032", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"33", "Demo Person 033", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"34", "Demo Person 034", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"35", "Demo Person 035", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"36", "Demo Person 036", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"37", "Demo Person 037", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"38", "Demo Person 038", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"39", "Demo Person 039", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"40", "Demo Person 040", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"41", "Demo Person 041", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"42", "Demo Person 042", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"43", "Demo Person 043", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"44", "Demo Person 044", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"45", "Demo Person 045", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"46", "Demo Person 046", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"47", "Demo Person 047", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"48", "Demo Person 048", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"49", "Demo Person 049", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"50", "Demo Person 050", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"51", "Demo Person 051", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"52", "Demo Person 052", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"53", "Demo Person 053", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"54", "Demo Person 054", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"55", "Demo Person 055", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"56", "Demo Person 056", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"57", "Demo Person 057", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"58", "Demo Person 058", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"59", "Demo Person 059", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"60", "Demo Person 060", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"61", "Demo Person 061", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"62", "Demo Person 062", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"63", "Demo Person 063", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"64", "Demo Person 064", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"65", "Demo Person 065", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"66", "Demo Person 066", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"67", "Demo Person 067", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"68", "Demo Person 068", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"69", "Demo Person 069", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"70", "Demo Person 070", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"71", "Demo Person 071", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"72", "Demo Person 072", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"73", "Demo Person 073", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"74", "Demo Person 074", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"75", "Demo Person 075", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"76", "Demo Person 076", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"77", "Demo Person 077", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"78", "Demo Person 078", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"79", "Demo Person 079", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"80", "Demo Person 080", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"81", "Demo Person 081", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"82", "Demo Person 082", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"83", "Demo Person 083", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"84", "Demo Person 084", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"85", "Demo Person 085", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"86", "Demo Person 086", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"87", "Demo Person 087", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"88", "Demo Person 088", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"89", "Demo Person 089", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"90", "Demo Person 090", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"91", "Demo Person 091", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"92", "Demo Person 092", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"93", "Demo Person 093", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"94", "Demo Person 094", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"95", "Demo Person 095", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"96", "Demo Person 096", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"97", "Demo Person 097", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"98", "Demo Person 098", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"99", "Demo Person 099", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"100", "Demo Person 100", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"101", "Demo Person 101", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"102", "Demo Person 102", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"103", "Demo Person 103", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"104", "Demo Person 104", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"105", "Demo Person 105", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"106", "Demo Person 106", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"107", "Demo Person 107", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"108", "Demo Person 108", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"109", "Demo Person 109", "G1", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"110", "Demo Person 110", "G2", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"111", "Demo Person 111", "G3", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"112", "Demo Person 112", "G4", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"113", "Demo Person 113", "G1", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"114", "Demo Person 114", "G2", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"115", "Demo Person 115", "G3", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"116", "Demo Person 116", "G4", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"117", "Demo Person 117", "G1", "S3", "Demo Lead 3", "Demo Department 3", "Active"},
+				{"118", "Demo Person 118", "G2", "S1", "Demo Lead 1", "Demo Department 1", "Active"},
+				{"119", "Demo Person 119", "G3", "S2", "Demo Lead 2", "Demo Department 2", "Active"},
+				{"120", "Demo Person 120", "G4", "S3", "Demo Lead 3", "Demo Department 3", "Active"}
+			})

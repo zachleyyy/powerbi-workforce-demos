@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "hier_missing_supervisor",
+  "position": {
+    "x": 1358,
+    "y": 1458,
+    "z": 16000,
+    "height": 94,
+    "width": 502,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Unassigned Supervisor Closing HC"
+                }
+              },
+              "queryRef": "Audit_Data.Unassigned Supervisor Closing HC",
+              "nativeQueryRef": "Unassigned Supervisor Closing HC"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

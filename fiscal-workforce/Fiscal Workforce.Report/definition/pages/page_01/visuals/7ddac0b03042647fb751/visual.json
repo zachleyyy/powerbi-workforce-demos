@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "7ddac0b03042647fb751",
+  "position": {
+    "x": 1250.5416893466333,
+    "y": 215.85334975589168,
+    "z": 19000,
+    "height": 347.24234525947793,
+    "width": 612.3665683292145,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Date"
+                    }
+                  },
+                  "Property": "FiscalMonthLabel"
+                }
+              },
+              "active": true,
+              "queryRef": "Dim_Date.FiscalMonthLabel",
+              "nativeQueryRef": "FiscalMonthLabel"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Joiners"
+                }
+              },
+              "queryRef": "Audit_Data.Joiners",
+              "nativeQueryRef": "Joiners"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Terminations"
+                }
+              },
+              "queryRef": "Audit_Data.Terminations",
+              "nativeQueryRef": "Terminations"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Net HC Change"
+                }
+              },
+              "queryRef": "Audit_Data.Net HC Change",
+              "nativeQueryRef": "Net HC Change"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

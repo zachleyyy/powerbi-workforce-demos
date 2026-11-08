@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "00000000000000004e32",
+  "position": {
+    "x": 326,
+    "y": 98,
+    "z": 2000,
+    "height": 108,
+    "width": 244,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Ending Headcount"
+                }
+              },
+              "queryRef": "Audit_Data.Ending Headcount",
+              "nativeQueryRef": "Ending Headcount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "% of Total HC"
+                }
+              },
+              "queryRef": "Audit_Data.% of Total HC",
+              "nativeQueryRef": "% of Total HC"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "0000000000000000c367",
+  "position": {
+    "x": 1092,
+    "y": 226,
+    "z": 7000,
+    "height": 310,
+    "width": 768,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Vendor"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Vendor",
+              "nativeQueryRef": "Vendor"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "CW Net Change"
+                }
+              },
+              "queryRef": "Audit_Data.CW Net Change",
+              "nativeQueryRef": "CW Net Change"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "CW Joiners"
+                }
+              },
+              "queryRef": "Audit_Data.CW Joiners",
+              "nativeQueryRef": "CW Joiners"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "CW Terminations"
+                }
+              },
+              "queryRef": "Audit_Data.CW Terminations",
+              "nativeQueryRef": "CW Terminations"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Audit_Data"
+                  }
+                },
+                "Property": "CW Net Change"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+table Dim_Product
+	column 'Item BU'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Item BU
+
+	column 'Oracle Project Code'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Oracle Project Code
+
+	column 'Oracle Project Code Description'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Oracle Project Code Description
+
+	column 'Resource Code'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Resource Code
+
+	column AREA
+		dataType: string
+		summarizeBy: none
+		sourceColumn: AREA
+
+	column 'PRODUCT Line'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PRODUCT Line
+
+	column PRODUCT
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PRODUCT
+
+	column 'Source Note'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Source Note
+
+	partition Dim_Product = m
+		mode: import
+		source =
+			#table(type table [#"Item BU" = nullable text, #"Oracle Project Code" = nullable text, #"Oracle Project Code Description" = nullable text, #"Resource Code" = nullable text, #"AREA" = nullable text, #"PRODUCT Line" = nullable text, #"PRODUCT" = nullable text, #"Source Note" = nullable text], {
+				{"Demo Unit", "0001", "Demo Product 02", "DEMO-02", "Demo Area", "Demo Product Line 02", "Demo Product 02", "Synthetic demonstration"},
+				{"Demo Unit", "0002", "Demo Product 03", "DEMO-03", "Demo Area", "Demo Product Line 01", "Demo Product 03", "Synthetic demonstration"},
+				{"Demo Unit", "0003", "Demo Product 04", "DEMO-04", "Demo Area", "Demo Product Line 02", "Demo Product 04", "Synthetic demonstration"},
+				{"Demo Unit", "0004", "Demo Product 01", "DEMO-01", "Demo Area", "Demo Product Line 01", "Demo Product 01", "Synthetic demonstration"}
+			})
+

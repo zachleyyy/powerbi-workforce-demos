@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "0000000000000000271b",
+  "position": {
+    "x": 0.7943101414170801,
+    "y": 694.9816114384313,
+    "z": 6000,
+    "height": 80,
+    "width": 264,
+    "tabOrder": 4000
+  },
+  "parentGroupName": "3590589ab89796e3f203",
+  "visual": {
+    "visualType": "slicer",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Supervisor"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Supervisor",
+              "nativeQueryRef": "Supervisor"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

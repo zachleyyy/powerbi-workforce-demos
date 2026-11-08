@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "at_reason_cw_11",
+  "position": {
+    "x": 637.7777777777777,
+    "y": 674.4444444444445,
+    "z": 12000,
+    "height": 232.22222222222223,
+    "width": 625.5555555555555,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "STG_WorkforceRoster"
+                    }
+                  },
+                  "Property": "TerminationReason"
+                }
+              },
+              "queryRef": "DemoField_38a34a1b7caf",
+              "active": true,
+              "displayName": "Synthetic demo"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Terminated Employees"
+                }
+              },
+              "queryRef": "DemoField_b26407715047",
+              "displayName": "Synthetic demo",
+              "format": "0"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Terminated Employees"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

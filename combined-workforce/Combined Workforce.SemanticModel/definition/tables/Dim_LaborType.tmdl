@@ -1,0 +1,23 @@
+table Dim_LaborType
+
+	column LaborType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: LaborType
+		sortByColumn: SortOrder
+
+	column SortOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+
+	partition Dim_LaborType = m
+		mode: import
+		source =
+			#table(type table [#"LaborType" = text, #"SortOrder" = Int64.Type], {
+				{"DL", 1},
+				{"IDL", 2}
+			})

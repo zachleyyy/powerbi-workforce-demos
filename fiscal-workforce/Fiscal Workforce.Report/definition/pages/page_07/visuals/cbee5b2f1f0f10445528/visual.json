@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "cbee5b2f1f0f10445528",
+  "position": {
+    "x": 1104.1721502887547,
+    "y": 1505.689295848302,
+    "z": 23000,
+    "height": 318.85185088552277,
+    "width": 758.7493118294384,
+    "tabOrder": 22000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Attrition Reason Label"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Attrition Reason Label",
+              "nativeQueryRef": "Attrition Reason Label"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Attrition Eligible Exits"
+                }
+              },
+              "queryRef": "Audit_Data.Attrition Eligible Exits",
+              "nativeQueryRef": "Attrition Eligible Exits"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Review Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Review Events",
+              "nativeQueryRef": "Reviewed Review Events"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Attrition Eligible Exits"
+                }
+              },
+              "queryRef": "Audit_Data.Attrition Eligible Exits",
+              "nativeQueryRef": "Attrition Eligible Exits"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Audit_Data"
+                  }
+                },
+                "Property": "Attrition Eligible Exits"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    }
+  }
+}

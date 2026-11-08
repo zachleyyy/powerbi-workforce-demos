@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "0000000000000000c36a",
+  "position": {
+    "x": 1358,
+    "y": 556,
+    "z": 10000,
+    "height": 290,
+    "width": 502,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Date"
+                    }
+                  },
+                  "Property": "FiscalMonthLabel"
+                }
+              },
+              "active": true,
+              "queryRef": "Dim_Date.FiscalMonthLabel",
+              "nativeQueryRef": "FiscalMonthLabel"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Contingent Worker Headcount"
+                }
+              },
+              "queryRef": "Audit_Data.Contingent Worker Headcount",
+              "nativeQueryRef": "Contingent Worker Headcount"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

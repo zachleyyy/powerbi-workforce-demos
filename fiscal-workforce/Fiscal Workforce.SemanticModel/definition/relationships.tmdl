@@ -1,0 +1,26 @@
+relationship demo_49_14fc59336749
+	isActive: false
+	fromColumn: Audit_Data.HireDate
+	toColumn: Dim_Date.Date
+
+relationship demo_49_7f67293ababf
+	fromColumn: Audit_Data.PeriodStart
+	toColumn: Dim_Date.Date
+
+relationship demo_49_ffbd02b4b7fc
+	isActive: false
+	fromColumn: Audit_Data.TerminationDate
+	toColumn: Dim_Date.Date
+
+relationship demo_62_98b1d77cf48c
+	fromColumn: Oracle_HC_Latest_Raw.'Oracle Project Code'
+	toColumn: Dim_Product.'Oracle Project Code'
+
+relationship demo_62_7f0d3a3db76e
+	fromColumn: HC_Current.Product
+	toColumn: Dim_Product.Product
+
+relationship demo_49_a43d5aa7f99b
+	fromColumn: Audit_Data.'Nationality Group'
+	toColumn: Dim_Nationality_Group.'Nationality Group'
+

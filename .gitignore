@@ -1,0 +1,18 @@
+# Local caches and user/tenant metadata must never be published.
+**/.pbi/
+**/.platform
+**/cache.abf
+**/localSettings.json
+**/node_modules/
+**/__pycache__/
+**/.env
+**/.env.*
+*.pbix
+*.pbit
+*.xlsx
+*.csv
+*.pdf
+*.zip
+*.abf
+*.log
+*.bak

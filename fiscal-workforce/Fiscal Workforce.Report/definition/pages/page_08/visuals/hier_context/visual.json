@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "hier_context",
+  "position": {
+    "x": 326,
+    "y": 1370,
+    "width": 1534,
+    "height": 72,
+    "z": 1000,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Hierarchy Selection Context"
+                }
+              },
+              "queryRef": "Audit_Data.Hierarchy Selection Context",
+              "nativeQueryRef": "Hierarchy Selection Context"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

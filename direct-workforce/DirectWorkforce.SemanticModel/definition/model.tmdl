@@ -1,0 +1,38 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+ref table DateTableTemplate_fe536358-ceb0-4872-bfe7-1e323c169e75
+ref table Dim_Date
+ref table Dim_Employee
+ref table Dim_Employee_Latest
+ref table Dim_Grade
+ref table Dim_HOD
+ref table Dim_HOD_Latest
+ref table Dim_Product
+ref table Dim_Site
+ref table Fact_HCSnapshot
+ref table Fact_HCSnapshot_OLD
+ref table Fact_Movement
+ref table Fact_RequiredHC_Latest
+ref table Fact_RequiredHC_OLD
+ref table LocalDateTable_086dc462-3bac-43bd-aa8e-ea6ccda94441
+ref table LocalDateTable_2a3ed600-e690-4b68-8a01-b8b5fb48f528
+ref table LocalDateTable_3efacf53-058e-46f6-94f5-5c44c07e5dcc
+ref table LocalDateTable_40b21447-57a5-442f-b328-685011e6605c
+ref table LocalDateTable_5c401b7b-1e2b-428b-bc12-212cf7bf6969
+ref table LocalDateTable_640ed47f-d184-4302-8310-075c38576bf3
+ref table LocalDateTable_65854874-c34b-4ac8-b5f5-456b8eab797e
+ref table LocalDateTable_69fc62d4-cd06-4c98-832f-2bc594aacfbf
+ref table LocalDateTable_904e3a43-8777-4291-b985-1728b429c34c
+ref table LocalDateTable_9cdc2a79-4f05-469b-bb14-14f5873c8339
+ref table LocalDateTable_a01968b4-7c0a-4b46-a3d0-7f567bee6a5d
+ref table LocalDateTable_afb63ac0-3539-4642-bda0-932494ad6b08
+ref table LocalDateTable_cd33d62a-b65f-4c73-8f81-8d1df0edd8b7
+ref table LocalDateTable_e89ceddc-3b96-46a1-95c2-46342e9f01f0
+ref table STG_WorkforceRoster
+ref table _Measures

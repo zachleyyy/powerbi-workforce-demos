@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "5904ded98e797f28ced4",
+  "position": {
+    "x": 1.7763568394002505e-15,
+    "y": 0,
+    "z": 28000,
+    "height": 82.1181221897414,
+    "width": 265.12422306973656,
+    "tabOrder": 9000
+  },
+  "parentGroupName": "2e63b65945c83b2dc02f",
+  "visual": {
+    "visualType": "slicer",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Date"
+                    }
+                  },
+                  "Property": "FiscalYearLabel"
+                }
+              },
+              "active": true,
+              "queryRef": "Dim_Date.FiscalYearLabel",
+              "nativeQueryRef": "FiscalYearLabel"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

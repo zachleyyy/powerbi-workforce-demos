@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "attr_conversion_0",
+  "position": {
+    "x": 326,
+    "y": 2370,
+    "z": 24000,
+    "height": 120,
+    "width": 504,
+    "tabOrder": 23000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Conversion Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Conversion Events",
+              "nativeQueryRef": "Reviewed Conversion Events"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

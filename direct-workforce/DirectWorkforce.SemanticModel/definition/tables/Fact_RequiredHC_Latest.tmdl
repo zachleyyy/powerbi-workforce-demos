@@ -1,0 +1,105 @@
+table Fact_RequiredHC_Latest
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 7e0e4cfd-ee64-49a1-81b9-8b6f85b77d1d
+			defaultHierarchy: LocalDateTable_a01968b4-7c0a-4b46-a3d0-7f567bee6a5d.'Date Hierarchy'
+
+	column SiteKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteKey
+
+	column RequirementArea_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: RequirementArea_Source
+
+	column SourceQuarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SourceQuarter
+
+	column FiscalQuarter
+		dataType: string
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+
+	column RequiredHC
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: RequiredHC
+
+	column PlanSnapshotDate
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: PlanSnapshotDate
+
+		variation Variation
+			isDefault
+			relationship: cd401ae5-579e-43ef-a661-d85d6c481723
+			defaultHierarchy: LocalDateTable_65854874-c34b-4ac8-b5f5-456b8eab797e.'Date Hierarchy'
+
+	column SourceWorkbook
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SourceWorkbook
+
+	column SourceSheet
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SourceSheet
+
+	column HODMappingStatus
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODMappingStatus
+
+	partition Fact_RequiredHC_Latest = m
+		mode: import
+		source =
+			#table(type table [#"Date" = nullable datetime, #"SiteKey" = nullable text, #"RequirementArea_Source" = nullable text, #"SourceQuarter" = nullable text, #"FiscalQuarter" = nullable text, #"RequiredHC" = nullable number, #"PlanSnapshotDate" = nullable datetime, #"SourceWorkbook" = nullable text, #"SourceSheet" = nullable text, #"HODMappingStatus" = nullable text], {
+				{#datetime(2026, 1, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q1", "2026Q1", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 1, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q1", "2026Q1", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 1, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q1", "2026Q1", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 2, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q1", "2026Q1", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 2, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q1", "2026Q1", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 2, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q1", "2026Q1", 20.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 3, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q1", "2026Q1", 16.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 3, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q1", "2026Q1", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 3, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q1", "2026Q1", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 4, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q2", "2026Q2", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 4, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q2", "2026Q2", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 4, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q2", "2026Q2", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 5, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q2", "2026Q2", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 5, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q2", "2026Q2", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 5, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q2", "2026Q2", 20.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 6, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q2", "2026Q2", 16.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 6, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q2", "2026Q2", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 6, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q2", "2026Q2", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 7, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q3", "2026Q3", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 7, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q3", "2026Q3", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 7, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q3", "2026Q3", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 8, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q3", "2026Q3", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 8, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q3", "2026Q3", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 8, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q3", "2026Q3", 20.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 9, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q3", "2026Q3", 16.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 9, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q3", "2026Q3", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 9, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q3", "2026Q3", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 10, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q4", "2026Q4", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 10, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q4", "2026Q4", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 10, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q4", "2026Q4", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 11, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q4", "2026Q4", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 11, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q4", "2026Q4", 19.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 11, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q4", "2026Q4", 20.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 12, 1, 0, 0, 0), "SITE-01", "Demo Area 01", "2026Q4", "2026Q4", 16.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 12, 1, 0, 0, 0), "SITE-02", "Demo Area 02", "2026Q4", "2026Q4", 17.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"},
+				{#datetime(2026, 12, 1, 0, 0, 0), "SITE-03", "Demo Area 03", "2026Q4", "2026Q4", 18.0, #datetime(2026, 1, 1, 0, 0, 0), "synthetic-demo", "synthetic-demo", "Mapped"}
+			})
+

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "hier_missing_hod",
+  "position": {
+    "x": 326,
+    "y": 1458,
+    "z": 14000,
+    "height": 94,
+    "width": 502,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Unassigned HOD Closing HC"
+                }
+              },
+              "queryRef": "Audit_Data.Unassigned HOD Closing HC",
+              "nativeQueryRef": "Unassigned HOD Closing HC"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

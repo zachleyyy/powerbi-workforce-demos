@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "0000000000000000ea67",
+  "position": {
+    "x": 18,
+    "y": 92,
+    "z": 6000,
+    "height": 80,
+    "width": 264,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Date"
+                    }
+                  },
+                  "Property": "FiscalMonthLabel"
+                }
+              },
+              "active": true,
+              "queryRef": "Dim_Date.FiscalMonthLabel",
+              "nativeQueryRef": "FiscalMonthLabel"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

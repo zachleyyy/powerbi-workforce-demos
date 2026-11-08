@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "407b9ed47fcd620bd76b",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 22000,
+    "height": 40,
+    "width": 100,
+    "tabOrder": 27000
+  },
+  "visual": {
+    "visualType": "actionButton",
+    "drillFilterOtherVisuals": true
+  }
+}

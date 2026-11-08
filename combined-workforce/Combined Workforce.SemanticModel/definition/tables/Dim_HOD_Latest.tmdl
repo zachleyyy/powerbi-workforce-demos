@@ -1,0 +1,21 @@
+table Dim_HOD_Latest
+
+	column HODKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODKey
+
+	column HODName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODName
+
+
+	partition Dim_HOD_Latest = m
+		mode: import
+		source =
+			#table(type table [#"HODKey" = text, #"HODName" = text], {
+				{"Demo Lead 1", "Demo Lead 1"},
+				{"Demo Lead 2", "Demo Lead 2"},
+				{"Demo Lead 3", "Demo Lead 3"}
+			})

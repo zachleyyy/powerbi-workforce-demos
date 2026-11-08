@@ -1,0 +1,156 @@
+relationship c44445db-cbe2-4093-bdf8-672a7a466166
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.Date
+	toColumn: LocalDateTable_cd33d62a-b65f-4c73-8f81-8d1df0edd8b7.Date
+
+relationship d158115d-81e2-4fc4-96d0-20e4119a2896
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.WeekStart
+	toColumn: LocalDateTable_640ed47f-d184-4302-8310-075c38576bf3.Date
+
+relationship 919e7318-e064-4630-a3a0-d274652fe698
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.WeekEnd
+	toColumn: LocalDateTable_904e3a43-8777-4291-b985-1728b429c34c.Date
+
+relationship 06ce39f8-02ff-4bb4-8448-2a400d765dc2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.MonthStart
+	toColumn: LocalDateTable_e89ceddc-3b96-46a1-95c2-46342e9f01f0.Date
+
+relationship ec2737f3-1d70-4823-90de-30d992652415
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Date.MonthLabel
+	toColumn: LocalDateTable_086dc462-3bac-43bd-aa8e-ea6ccda94441.Date
+
+relationship 1d17667e-5135-46f2-8357-82e0d70af840
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_HCSnapshot.JoinDate
+	toColumn: LocalDateTable_5c401b7b-1e2b-428b-bc12-212cf7bf6969.Date
+
+relationship AutoDetected_943c0f13-a24a-4979-857b-22fb874b4668
+	fromColumn: Fact_HCSnapshot.GradeKey
+	toColumn: Dim_Grade.GradeKey
+
+relationship AutoDetected_f3874825-1f0e-4434-82ba-41f5018bb1d0
+	fromColumn: Fact_Movement.GradeKey
+	toColumn: Dim_Grade.GradeKey
+
+relationship AutoDetected_163a010a-6093-4dcb-bdd6-4d711fc15b08
+	fromColumn: Fact_HCSnapshot.SiteKey
+	toColumn: Dim_Site.SiteKey
+
+relationship AutoDetected_77c57f36-408b-4757-a766-3524e80e018e
+	fromColumn: Fact_Movement.SiteKey
+	toColumn: Dim_Site.SiteKey
+
+relationship AutoDetected_dba7d2fd-6c2c-4785-aede-8c58b00bfafa
+	fromColumn: Fact_RequiredHC_OLD.SiteKey
+	toColumn: Dim_Site.SiteKey
+
+relationship 9bbb723a-5fc0-0854-624d-bb5f103a2aa5
+	fromColumn: Fact_Movement.EventDate
+	toColumn: Dim_Date.Date
+
+relationship c08e3e94-4393-a24a-dcb1-664db3f573a0
+	fromColumn: Fact_RequiredHC_OLD.Date
+	toColumn: Dim_Date.Date
+
+relationship cf0985a6-287c-4983-a932-0525e196492a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_HCSnapshot_OLD.SnapshotDate
+	toColumn: LocalDateTable_40b21447-57a5-442f-b328-685011e6605c.Date
+
+relationship 63f0ed63-d7b9-4294-8d6f-f4532082f4af
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_HCSnapshot_OLD.JoinDate
+	toColumn: LocalDateTable_9cdc2a79-4f05-469b-bb14-14f5873c8339.Date
+
+relationship AutoDetected_c7ac265d-3949-4697-9833-29f073bb6a18
+	isActive: false
+	fromColumn: Fact_HCSnapshot_OLD.GradeKey
+	toColumn: Dim_Grade.GradeKey
+
+relationship AutoDetected_33af9621-cfce-4f6f-9079-b3c4d9aebcec
+	isActive: false
+	fromColumn: Fact_HCSnapshot_OLD.SiteKey
+	toColumn: Dim_Site.SiteKey
+
+relationship AutoDetected_fe76382a-0620-49c0-b0c9-b76eabd7d713
+	isActive: false
+	fromColumn: Fact_Movement.EmployeeCode_Source
+	toColumn: Fact_HCSnapshot_OLD.EmployeeCode_Source
+
+relationship 82674fdb-0658-450b-93e9-9b82c91bbd02
+	joinOnDateBehavior: datePartOnly
+	fromColumn: STG_WorkforceRoster.HireDate
+	toColumn: LocalDateTable_69fc62d4-cd06-4c98-832f-2bc594aacfbf.Date
+
+relationship 5d3ea050-1f49-4669-b3e0-8130df098c1b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: STG_WorkforceRoster.TerminationDate
+	toColumn: LocalDateTable_afb63ac0-3539-4642-bda0-932494ad6b08.Date
+
+relationship 2405db37-efdc-4723-8f3c-caef6db72463
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_HCSnapshot.TerminationDate_Source
+	toColumn: LocalDateTable_3efacf53-058e-46f6-94f5-5c44c07e5dcc.Date
+
+relationship AutoDetected_2063438c-4a5a-46a6-843e-b6ee1a12ce3b
+	fromColumn: STG_WorkforceRoster.GradeCode
+	toColumn: Dim_Grade.GradeKey
+
+relationship AutoDetected_86b3807c-739f-4584-9259-186104d9008c
+	fromColumn: Fact_HCSnapshot.EmployeeKey
+	toColumn: Dim_Employee_Latest.EmployeeKey
+
+relationship AutoDetected_9caa4190-6ffa-4410-8514-fff7e5aa52de
+	fromColumn: Fact_Movement.EmployeeKey
+	toColumn: Dim_Employee_Latest.EmployeeKey
+
+relationship f1cb1465-1deb-baf2-60e5-7074dadf34c9
+	fromColumn: Fact_HCSnapshot.HODKey
+	toColumn: Dim_HOD_Latest.HODKey
+
+relationship a9313c96-7829-9e01-53c8-15e7c85ae28b
+	fromColumn: Fact_Movement.HODKey
+	toColumn: Dim_HOD_Latest.HODKey
+
+relationship 146df952-ec09-4b62-b39e-935f13c75c70
+	joinOnDateBehavior: datePartOnly
+	fromColumn: STG_WorkforceRoster.'Date modified'
+	toColumn: LocalDateTable_2a3ed600-e690-4b68-8a01-b8b5fb48f528.Date
+
+relationship AutoDetected_41296c26-29ce-41dd-b0d8-b7db096dc013
+	fromColumn: Fact_HCSnapshot_OLD.HODCode
+	toColumn: Dim_HOD.HODCode
+
+relationship 7e0e4cfd-ee64-49a1-81b9-8b6f85b77d1d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_RequiredHC_Latest.Date
+	toColumn: LocalDateTable_a01968b4-7c0a-4b46-a3d0-7f567bee6a5d.Date
+
+relationship cd401ae5-579e-43ef-a661-d85d6c481723
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact_RequiredHC_Latest.PlanSnapshotDate
+	toColumn: LocalDateTable_65854874-c34b-4ac8-b5f5-456b8eab797e.Date
+
+relationship AutoDetected_c24d5322-fbdf-42f0-8b66-79a56290930b
+	fromColumn: Fact_RequiredHC_Latest.SiteKey
+	toColumn: Dim_Site.SiteKey
+
+relationship 23a47b4e-05fc-4d42-9a11-6ab5e18a2e31
+	fromColumn: STG_WorkforceRoster.'Product Mapping Key'
+	toColumn: Dim_Product.'Oracle Project Code'
+
+relationship 528a4756-0122-40e6-aa26-696ec3139c91
+	fromColumn: STG_WorkforceRoster.SiteKey
+	toColumn: Dim_Site.SiteKey
+
+relationship 4e2e3c16-a9d1-43df-bb39-48042726ea78
+	fromColumn: STG_WorkforceRoster.HODKey
+	toColumn: Dim_HOD_Latest.HODKey
+
+relationship 62914942-db53-533f-b57d-24a4de1899cd
+	fromColumn: Fact_HCSnapshot_OLD.EmployeeKey
+	toColumn: Dim_Employee_Latest.EmployeeKey

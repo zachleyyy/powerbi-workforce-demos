@@ -1,0 +1,43 @@
+table Dim_Product
+
+
+
+	column 'Oracle Project Code'
+		dataType: string
+		sourceColumn: Oracle Project Code
+		summarizeBy: none
+
+	column 'Oracle Project Code Description'
+		dataType: string
+		sourceColumn: Oracle Project Code Description
+		summarizeBy: none
+
+	column 'Resource Code'
+		dataType: string
+		sourceColumn: Resource Code
+		summarizeBy: none
+
+	column Area
+		dataType: string
+		sourceColumn: Area
+		summarizeBy: none
+
+	column 'Product Line'
+		dataType: string
+		sourceColumn: Product Line
+		summarizeBy: none
+
+	column Product
+		dataType: string
+		sourceColumn: Product
+		summarizeBy: none
+
+	partition Dim_Product = m
+		mode: import
+		source =
+			#table(type table [#"Oracle Project Code" = nullable text, #"Oracle Project Code Description" = nullable text, #"Resource Code" = nullable text, #"Area" = nullable text, #"Product Line" = nullable text, #"Product" = nullable text], {
+				{"PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"}
+			})

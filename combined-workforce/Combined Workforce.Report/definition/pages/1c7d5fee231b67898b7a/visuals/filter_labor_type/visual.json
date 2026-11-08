@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "filter_labor_type",
+  "position": {
+    "x": 741,
+    "y": 45,
+    "z": 18741,
+    "height": 56,
+    "width": 120,
+    "tabOrder": 18741
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_LaborType"
+                    }
+                  },
+                  "Property": "LaborType"
+                }
+              },
+              "queryRef": "DemoField_36ed550c0b6f",
+              "active": true,
+              "displayName": "Synthetic demo"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

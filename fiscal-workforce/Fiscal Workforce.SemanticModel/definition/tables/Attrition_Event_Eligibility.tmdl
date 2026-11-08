@@ -1,0 +1,99 @@
+table Attrition_Event_Eligibility
+
+
+
+	column PersonNumber
+		dataType: string
+		sourceColumn: PersonNumber
+		summarizeBy: none
+
+	column AssignmentNumber
+		dataType: string
+		sourceColumn: AssignmentNumber
+		summarizeBy: none
+
+	column HireDate
+		dataType: dateTime
+		sourceColumn: HireDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column TerminationDate
+		dataType: dateTime
+		sourceColumn: TerminationDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column AssignmentType
+		dataType: string
+		sourceColumn: AssignmentType
+		summarizeBy: none
+
+	column TerminationReason
+		dataType: string
+		sourceColumn: TerminationReason
+		summarizeBy: none
+
+	column SourceFile
+		dataType: string
+		sourceColumn: SourceFile
+		summarizeBy: none
+
+	column SnapshotDate
+		dataType: dateTime
+		sourceColumn: SnapshotDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column EmploymentEventKey
+		dataType: string
+		sourceColumn: EmploymentEventKey
+		summarizeBy: none
+
+	column OldPayloadCount
+		dataType: int64
+		sourceColumn: OldPayloadCount
+		summarizeBy: none
+
+	column SuccessorPayloadCount
+		dataType: int64
+		sourceColumn: SuccessorPayloadCount
+		summarizeBy: none
+
+	column SuccessorAssignmentNumber
+		dataType: string
+		sourceColumn: SuccessorAssignmentNumber
+		summarizeBy: none
+
+	column ConversionReviewStatus
+		dataType: string
+		sourceColumn: ConversionReviewStatus
+		summarizeBy: none
+
+	column IsVerifiedInternalConversion
+		dataType: boolean
+		sourceColumn: IsVerifiedInternalConversion
+		summarizeBy: none
+
+	column NeedsConversionReview
+		dataType: boolean
+		sourceColumn: NeedsConversionReview
+		summarizeBy: none
+
+	partition Attrition_Event_Eligibility = m
+		mode: import
+		source =
+			#table(type table [#"PersonNumber" = nullable text, #"AssignmentNumber" = nullable text, #"HireDate" = nullable datetime, #"TerminationDate" = nullable datetime, #"AssignmentType" = nullable text, #"TerminationReason" = nullable text, #"SourceFile" = nullable text, #"SnapshotDate" = nullable datetime, #"EmploymentEventKey" = nullable text, #"OldPayloadCount" = Int64.Type, #"SuccessorPayloadCount" = Int64.Type, #"SuccessorAssignmentNumber" = nullable text, #"ConversionReviewStatus" = nullable text, #"IsVerifiedInternalConversion" = nullable logical, #"NeedsConversionReview" = nullable logical], {
+				{"DEMO-001", "ASSIGN-001", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 1, 20, 0, 0, 0), "Employee", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-001", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-002", "ASSIGN-002", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 2, 20, 0, 0, 0), "Contingent Worker", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-002", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-003", "ASSIGN-003", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 3, 20, 0, 0, 0), "Employee", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-003", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-004", "ASSIGN-004", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 4, 20, 0, 0, 0), "Contingent Worker", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-004", 0, 0, "Synthetic SuccessorAssignmentNumber", "Synthetic verified", true, false},
+				{"DEMO-005", "ASSIGN-005", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 5, 20, 0, 0, 0), "Employee", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-005", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-006", "ASSIGN-006", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 6, 20, 0, 0, 0), "Contingent Worker", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-006", 0, 0, "Synthetic SuccessorAssignmentNumber", "Synthetic review", false, true},
+				{"DEMO-007", "ASSIGN-007", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 7, 20, 0, 0, 0), "Employee", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-007", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-008", "ASSIGN-008", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 8, 20, 0, 0, 0), "Contingent Worker", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-008", 0, 0, "Synthetic SuccessorAssignmentNumber", "Synthetic verified", true, false},
+				{"DEMO-009", "ASSIGN-009", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 9, 20, 0, 0, 0), "Employee", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-009", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-010", "ASSIGN-010", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 10, 20, 0, 0, 0), "Contingent Worker", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-010", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-011", "ASSIGN-011", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 11, 20, 0, 0, 0), "Employee", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-011", 0, 0, "Synthetic SuccessorAssignmentNumber", "Not applicable", false, false},
+				{"DEMO-012", "ASSIGN-012", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 12, 20, 0, 0, 0), "Contingent Worker", "Demo departure", "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "EVENT-012", 0, 0, "Synthetic SuccessorAssignmentNumber", "Synthetic review", false, true}
+			})

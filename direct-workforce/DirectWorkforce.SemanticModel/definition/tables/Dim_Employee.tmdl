@@ -1,0 +1,71 @@
+table Dim_Employee
+	column EmployeeKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column EmployeeName_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeName_Source
+
+	column EmployeeType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeType
+
+	partition Dim_Employee = m
+		mode: import
+		source =
+			#table(type table [#"EmployeeKey" = nullable (Int64.Type), #"EmployeeName_Source" = nullable text, #"EmployeeType" = nullable text], {
+				{1, "Demo Worker 001", "Employee"},
+				{2, "Demo Worker 002", "Contingent Worker"},
+				{3, "Demo Worker 003", "Employee"},
+				{4, "Demo Worker 004", "Contingent Worker"},
+				{5, "Demo Worker 005", "Employee"},
+				{6, "Demo Worker 006", "Contingent Worker"},
+				{7, "Demo Worker 007", "Employee"},
+				{8, "Demo Worker 008", "Contingent Worker"},
+				{9, "Demo Worker 009", "Employee"},
+				{10, "Demo Worker 010", "Contingent Worker"},
+				{11, "Demo Worker 011", "Employee"},
+				{12, "Demo Worker 012", "Contingent Worker"},
+				{13, "Demo Worker 013", "Employee"},
+				{14, "Demo Worker 014", "Contingent Worker"},
+				{15, "Demo Worker 015", "Employee"},
+				{16, "Demo Worker 016", "Contingent Worker"},
+				{17, "Demo Worker 017", "Employee"},
+				{18, "Demo Worker 018", "Contingent Worker"},
+				{19, "Demo Worker 019", "Employee"},
+				{20, "Demo Worker 020", "Contingent Worker"},
+				{21, "Demo Worker 021", "Employee"},
+				{22, "Demo Worker 022", "Contingent Worker"},
+				{23, "Demo Worker 023", "Employee"},
+				{24, "Demo Worker 024", "Contingent Worker"},
+				{25, "Demo Worker 025", "Employee"},
+				{26, "Demo Worker 026", "Contingent Worker"},
+				{27, "Demo Worker 027", "Employee"},
+				{28, "Demo Worker 028", "Contingent Worker"},
+				{29, "Demo Worker 029", "Employee"},
+				{30, "Demo Worker 030", "Contingent Worker"},
+				{31, "Demo Worker 031", "Employee"},
+				{32, "Demo Worker 032", "Contingent Worker"},
+				{33, "Demo Worker 033", "Employee"},
+				{34, "Demo Worker 034", "Contingent Worker"},
+				{35, "Demo Worker 035", "Employee"},
+				{36, "Demo Worker 036", "Contingent Worker"},
+				{37, "Demo Worker 037", "Employee"},
+				{38, "Demo Worker 038", "Contingent Worker"},
+				{39, "Demo Worker 039", "Employee"},
+				{40, "Demo Worker 040", "Contingent Worker"},
+				{41, "Demo Worker 041", "Employee"},
+				{42, "Demo Worker 042", "Contingent Worker"},
+				{43, "Demo Worker 043", "Employee"},
+				{44, "Demo Worker 044", "Contingent Worker"},
+				{45, "Demo Worker 045", "Employee"},
+				{46, "Demo Worker 046", "Contingent Worker"},
+				{47, "Demo Worker 047", "Employee"},
+				{48, "Demo Worker 048", "Contingent Worker"}
+			})
+

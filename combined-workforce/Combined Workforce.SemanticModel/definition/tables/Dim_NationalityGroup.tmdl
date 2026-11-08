@@ -1,0 +1,23 @@
+table Dim_NationalityGroup
+
+	column NationalityGroup
+		dataType: string
+		summarizeBy: none
+		sourceColumn: NationalityGroup
+		sortByColumn: SortOrder
+
+	column SortOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: SortOrder
+
+
+	partition Dim_NationalityGroup = m
+		mode: import
+		source =
+			#table(type table [#"NationalityGroup" = text, #"SortOrder" = Int64.Type], {
+				{"Local", 1},
+				{"Foreign", 2}
+			})

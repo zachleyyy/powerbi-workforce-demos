@@ -1,0 +1,145 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "00000000000000009c5c",
+  "position": {
+    "x": 326,
+    "y": 866,
+    "z": 24000,
+    "height": 500,
+    "width": 1534,
+    "tabOrder": 24000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Location"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Location",
+              "nativeQueryRef": "Location"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "HOD"
+                }
+              },
+              "active": false,
+              "queryRef": "Audit_Data.HOD",
+              "nativeQueryRef": "HOD"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Employee Type"
+                }
+              },
+              "active": false,
+              "queryRef": "Audit_Data.Employee Type",
+              "nativeQueryRef": "Employee Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Gender"
+                }
+              },
+              "active": false,
+              "queryRef": "Audit_Data.Gender",
+              "nativeQueryRef": "Gender"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Nationality"
+                }
+              },
+              "active": false,
+              "queryRef": "Audit_Data.Nationality",
+              "nativeQueryRef": "Nationality"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Ending Headcount"
+                }
+              },
+              "queryRef": "Audit_Data.Ending Headcount",
+              "nativeQueryRef": "Ending Headcount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "% of Total HC"
+                }
+              },
+              "queryRef": "Audit_Data.% of Total HC",
+              "nativeQueryRef": "% of Total HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Net HC Change"
+                }
+              },
+              "queryRef": "Audit_Data.Net HC Change",
+              "nativeQueryRef": "Net HC Change"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

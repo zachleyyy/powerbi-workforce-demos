@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "00000000000000004e37",
+  "position": {
+    "x": 1616,
+    "y": 98,
+    "z": 7000,
+    "height": 108,
+    "width": 244,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Contingent Worker Headcount"
+                }
+              },
+              "queryRef": "Audit_Data.Contingent Worker Headcount",
+              "nativeQueryRef": "Contingent Worker Headcount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "CW % of Total"
+                }
+              },
+              "queryRef": "Audit_Data.CW % of Total",
+              "nativeQueryRef": "CW % of Total"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

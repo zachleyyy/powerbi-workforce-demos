@@ -1,0 +1,150 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "00000000000000002730",
+  "position": {
+    "x": 325.0915521813187,
+    "y": 577.5562682370237,
+    "z": 13000,
+    "height": 195.40077338557987,
+    "width": 1538.9972417094343,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Date"
+                    }
+                  },
+                  "Property": "FiscalMonthLabel"
+                }
+              },
+              "queryRef": "Dim_Date.FiscalMonthLabel",
+              "nativeQueryRef": "FiscalMonthLabel"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Beginning Headcount"
+                }
+              },
+              "queryRef": "Audit_Data.Beginning Headcount",
+              "nativeQueryRef": "Beginning Headcount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Joiners"
+                }
+              },
+              "queryRef": "Audit_Data.Joiners",
+              "nativeQueryRef": "Joiners"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Joiner Rate %"
+                }
+              },
+              "queryRef": "Audit_Data.Joiner Rate %",
+              "nativeQueryRef": "Joiner Rate %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Terminations"
+                }
+              },
+              "queryRef": "Audit_Data.Terminations",
+              "nativeQueryRef": "Terminations"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Termination Rate %"
+                }
+              },
+              "queryRef": "Audit_Data.Termination Rate %",
+              "nativeQueryRef": "Termination Rate %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Net HC Change"
+                }
+              },
+              "queryRef": "Audit_Data.Net HC Change",
+              "nativeQueryRef": "Net HC Change"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Ending Headcount"
+                }
+              },
+              "queryRef": "Audit_Data.Ending Headcount",
+              "nativeQueryRef": "Ending Headcount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Net HC Change %"
+                }
+              },
+              "queryRef": "Audit_Data.Net HC Change %",
+              "nativeQueryRef": "Net HC Change %"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

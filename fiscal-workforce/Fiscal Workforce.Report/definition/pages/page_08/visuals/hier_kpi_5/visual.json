@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "hier_kpi_5",
+  "position": {
+    "x": 1426,
+    "y": 188,
+    "z": 10000,
+    "height": 104,
+    "width": 214,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Conversion Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Conversion Events",
+              "nativeQueryRef": "Reviewed Conversion Events"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,291 @@
+table _Measures
+	measure 'Total Employees' = COUNT(STG_WorkforceRoster[PersonNumber])
+		formatString: 0
+	measure 'Active Employees' =
+			
+			VAR SelectedEndDate =
+			    MAX ( Dim_Date[Date] )
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( STG_WorkforceRoster[PersonNumber] ),
+			        REMOVEFILTERS ( Dim_Date ),
+			        FILTER (
+			            ALL (
+			                STG_WorkforceRoster[HireDate],
+			                STG_WorkforceRoster[TerminationDate]
+			            ),
+			            STG_WorkforceRoster[HireDate] <= SelectedEndDate
+			                &&
+			                (
+			                    ISBLANK ( STG_WorkforceRoster[TerminationDate] )
+			                        || STG_WorkforceRoster[TerminationDate] >= SelectedEndDate
+			                )
+			        )
+			    )
+		formatString: 0
+	measure 'Terminated Employees' =
+			
+			VAR StartDate = MIN(Dim_Date[Date])
+			VAR EndDate = MAX(Dim_Date[Date])
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(STG_WorkforceRoster[PersonNumber]),
+			    REMOVEFILTERS(STG_WorkforceRoster[TerminationDate]),
+			
+			    FILTER(
+			        STG_WorkforceRoster,
+			        NOT ISBLANK(STG_WorkforceRoster[TerminationDate]) &&
+			        STG_WorkforceRoster[TerminationDate] >= StartDate &&
+			        STG_WorkforceRoster[TerminationDate] <= EndDate
+			    )
+			)
+		formatString: 0
+	measure 'Joined Employees' =
+			
+			VAR StartDate =
+			    MIN(Dim_Date[Date])
+			VAR EndDate =
+			    MAX(Dim_Date[Date])
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(STG_WorkforceRoster[PersonNumber]),
+			    REMOVEFILTERS(STG_WorkforceRoster[HireDate]),
+			    FILTER(
+			        STG_WorkforceRoster,
+			        NOT ISBLANK(STG_WorkforceRoster[HireDate]) &&
+			        STG_WorkforceRoster[HireDate] >= StartDate &&
+			        STG_WorkforceRoster[HireDate] <= EndDate
+			    )
+			)
+		formatString: 0
+	measure 'Beginning Headcount' =
+			
+			VAR SelectedStartDate =
+			    MIN(Dim_Date[Date])
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(STG_WorkforceRoster[PersonNumber]),
+			    REMOVEFILTERS(STG_WorkforceRoster[HireDate], STG_WorkforceRoster[TerminationDate]),
+			    REMOVEFILTERS(STG_WorkforceRoster[TerminationType]),
+			    FILTER(
+			        STG_WorkforceRoster,
+			        STG_WorkforceRoster[HireDate] <= SelectedStartDate &&
+			        (
+			            ISBLANK(STG_WorkforceRoster[TerminationDate]) ||
+			            STG_WorkforceRoster[TerminationDate] >= SelectedStartDate
+			        )
+			    )
+			)
+		formatString: 0
+	measure 'Ending Headcount' =
+			
+			VAR SelectedEndDate =
+			    MAX(Dim_Date[Date])
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(STG_WorkforceRoster[PersonNumber]),
+			    REMOVEFILTERS(STG_WorkforceRoster[HireDate], STG_WorkforceRoster[TerminationDate]),
+			    REMOVEFILTERS(STG_WorkforceRoster[TerminationType]),
+			    FILTER(
+			        STG_WorkforceRoster,
+			        STG_WorkforceRoster[HireDate] <= SelectedEndDate &&
+			        (
+			            ISBLANK(STG_WorkforceRoster[TerminationDate]) ||
+			            STG_WorkforceRoster[TerminationDate] >= SelectedEndDate
+			        )
+			    )
+			)
+		formatString: 0
+	measure 'Joined Selected Period' =
+			
+			VAR StartDate =
+			    MINX (
+			        ALLSELECTED ( Dim_Date[Date] ),
+			        Dim_Date[Date]
+			    )
+			VAR EndDate =
+			    MAXX (
+			        ALLSELECTED ( Dim_Date[Date] ),
+			        Dim_Date[Date]
+			    )
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( STG_WorkforceRoster[PersonNumber] ),
+			        REMOVEFILTERS ( Dim_Date ),
+			        FILTER (
+			            ALL ( STG_WorkforceRoster[HireDate] ),
+			            NOT ISBLANK ( STG_WorkforceRoster[HireDate] )
+			                && STG_WorkforceRoster[HireDate] >= StartDate
+			                && STG_WorkforceRoster[HireDate] <= EndDate
+			        )
+			    )
+		formatString: 0
+	measure 'Terminated Selected Period' =
+			
+			VAR StartDate = MIN(Dim_Date[Date])
+			VAR EndDate = MAX(Dim_Date[Date])
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(STG_WorkforceRoster[PersonNumber]),
+			    REMOVEFILTERS(STG_WorkforceRoster[TerminationDate]),
+			
+			    FILTER(
+			        STG_WorkforceRoster,
+			        NOT ISBLANK(STG_WorkforceRoster[TerminationDate]) &&
+			        STG_WorkforceRoster[TerminationDate] >= StartDate &&
+			        STG_WorkforceRoster[TerminationDate] <= EndDate
+			    )
+			)
+		formatString: 0
+	measure 'Average Headcount' = ([Beginning Headcount] + [Ending Headcount]) / 2
+	measure 'Attrition Rate' =
+			
+			DIVIDE(
+			    [Terminated Employees],
+			    CALCULATE(
+			        [Average Headcount],
+			        REMOVEFILTERS(STG_WorkforceRoster[TerminationType])
+			    ),
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+	measure 'Header Info' = "Synthetic workforce demonstration"
+	measure 'Show Terminated Detail' =
+			
+			IF([Terminated Employees] > 0, 1, 0)
+		formatString: 0
+	measure 'Show Active Detail' =
+			
+			VAR SelectedEndDate =
+			    MAXX (
+			        ALLSELECTED ( Dim_Date[Date] ),
+			        Dim_Date[Date]
+			    )
+			VAR HireDate =
+			    SELECTEDVALUE ( STG_WorkforceRoster[HireDate] )
+			VAR TerminationDate =
+			    SELECTEDVALUE ( STG_WorkforceRoster[TerminationDate] )
+			RETURN
+			    IF (
+			        NOT ISBLANK ( HireDate )
+			            && HireDate <= SelectedEndDate
+			            && (
+			                ISBLANK ( TerminationDate )
+			                    || TerminationDate >= SelectedEndDate
+			            ),
+			        1,
+			        0
+			    )
+		formatString: 0
+	measure 'Show Joined Detail' =
+			
+			VAR SelectedStartDate =
+			    MINX (
+			        ALLSELECTED ( Dim_Date[Date] ),
+			        Dim_Date[Date]
+			    )
+			VAR SelectedEndDate =
+			    MAXX (
+			        ALLSELECTED ( Dim_Date[Date] ),
+			        Dim_Date[Date]
+			    )
+			VAR EmployeeHireDate =
+			    SELECTEDVALUE ( STG_WorkforceRoster[HireDate] )
+			RETURN
+			    IF (
+			        NOT ISBLANK ( EmployeeHireDate )
+			            && EmployeeHireDate >= SelectedStartDate
+			            && EmployeeHireDate <= SelectedEndDate,
+			        1,
+			        0
+			    )
+		formatString: 0
+	measure 'Current DL HC' =
+			
+			VAR SelectedDate =
+			    MAX(Dim_Date[Date])
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(Fact_HCSnapshot[EmployeeKey]),
+			    Fact_HCSnapshot[JoinDate] <= SelectedDate,
+			    ISBLANK(Fact_HCSnapshot[TerminationDate_Source])
+			        || Fact_HCSnapshot[TerminationDate_Source] > SelectedDate
+			)
+		formatString: 0
+	measure 'Required DL HC' =
+			
+			VAR SelectedQuarter =
+			    [Selected Requirement Quarter]
+			
+			RETURN
+			SUMX(
+			    VALUES(Fact_RequiredHC_Latest[SiteKey]),
+			    CALCULATE(
+			        MAX(Fact_RequiredHC_Latest[RequiredHC]),
+			        REMOVEFILTERS(Dim_Date),
+			        REMOVEFILTERS(Fact_RequiredHC_Latest[Date]),
+			        Fact_RequiredHC_Latest[SourceQuarter] = SelectedQuarter
+			    )
+			)
+		formatString: 0
+	measure 'HC Gap' =
+			
+			[Current DL HC] - [Required DL HC]
+	measure 'Fulfilment %' =
+			
+			DIVIDE(
+			    [Current DL HC],
+			    [Required DL HC]
+			)
+	measure Joiners =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Fact_Movement[EmployeeKey]),
+			    Fact_Movement[EventType] = "JOINER"
+			)
+		formatString: 0
+	measure Exits =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(Fact_Movement[EmployeeKey]),
+			    Fact_Movement[EventType] = "EXIT"
+			)
+		formatString: 0
+	measure 'Required HC Card' = FORMAT([Required DL HC], "#,##0")
+	measure 'Joiners Validation' = [Joiners]
+		formatString: 0
+	measure 'HC Gap Display' =
+			
+			ROUND([HC Gap], 0)
+	measure 'Selected Requirement Quarter' = SELECTEDVALUE(Fact_RequiredHC_Latest[FiscalQuarter], "Synthetic demo")
+	measure 'HC Net Movement' =
+			
+			[Joined Employees] - [Terminated Employees]
+		formatString: 0
+	measure 'Reconciliation Variance' =
+			
+			[Ending Headcount] - ( [Beginning Headcount] + [Joined Employees] - [Terminated Employees] )
+		formatString: 0;-0;0
+	measure 'Employee Attrition Rate' =
+			
+			CALCULATE(
+			    [Attrition Rate],
+			    KEEPFILTERS(STG_WorkforceRoster[AssignmentType] = "Employee")
+			)
+		formatString: 0.00%;-0.00%;0.00%
+	measure 'CW Attrition Rate' =
+			
+			CALCULATE(
+			    [Attrition Rate],
+			    KEEPFILTERS(STG_WorkforceRoster[AssignmentType] = "Contingent Worker")
+			)
+		formatString: 0.00%;-0.00%;0.00%
+	column x
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [x]
+
+	partition _Measures = calculated
+		mode: import
+		source = DATATABLE("x", STRING, {{"x"}})
+

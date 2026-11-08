@@ -1,0 +1,162 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "62e7a4f618824c3bb109",
+  "position": {
+    "x": 1112.113997655355,
+    "y": 225.23827800614785,
+    "z": 10000,
+    "height": 300.31770400819715,
+    "width": 748.4480279579288,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Location"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Location",
+              "nativeQueryRef": "Location"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Eligible Exits"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Eligible Exits",
+              "nativeQueryRef": "Reviewed Eligible Exits"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Opening HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Opening HC",
+              "nativeQueryRef": "Reviewed Opening HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Closing HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Closing HC",
+              "nativeQueryRef": "Reviewed Closing HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Average HC"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Average HC",
+              "nativeQueryRef": "Reviewed Average HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Conversion Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Conversion Events",
+              "nativeQueryRef": "Reviewed Conversion Events"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Review Events"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Review Events",
+              "nativeQueryRef": "Reviewed Review Events"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Reviewed Rate"
+                }
+              },
+              "queryRef": "Audit_Data.Reviewed Rate",
+              "nativeQueryRef": "Reviewed Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Audit_Data"
+                  }
+                },
+                "Property": "Location"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    }
+  }
+}

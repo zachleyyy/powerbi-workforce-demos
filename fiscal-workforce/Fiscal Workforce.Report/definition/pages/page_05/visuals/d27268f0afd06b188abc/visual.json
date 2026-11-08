@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "d27268f0afd06b188abc",
+  "position": {
+    "x": 1.7763568394002505e-15,
+    "y": 105.58044281538176,
+    "z": 29000,
+    "height": 82.1181221897414,
+    "width": 265.12422306973656,
+    "tabOrder": 8000
+  },
+  "parentGroupName": "2e63b65945c83b2dc02f",
+  "visual": {
+    "visualType": "slicer",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Date"
+                    }
+                  },
+                  "Property": "FiscalQuarterLabel"
+                }
+              },
+              "active": true,
+              "queryRef": "Dim_Date.FiscalQuarterLabel",
+              "nativeQueryRef": "FiscalQuarterLabel"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

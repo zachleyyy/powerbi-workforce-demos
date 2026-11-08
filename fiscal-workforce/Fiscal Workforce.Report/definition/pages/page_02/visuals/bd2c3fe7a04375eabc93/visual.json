@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "bd2c3fe7a04375eabc93",
+  "position": {
+    "x": 0.7943101414170801,
+    "y": 794.6964597771365,
+    "z": 8000,
+    "height": 80,
+    "width": 264,
+    "tabOrder": 6000
+  },
+  "parentGroupName": "40e49d290a1e278c4606",
+  "visual": {
+    "visualType": "slicer",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Gender"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Gender",
+              "nativeQueryRef": "Gender"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+table Dim_Nationality_Group
+
+
+
+	column 'Nationality Group'
+		dataType: string
+		sourceColumn: Nationality Group
+		summarizeBy: none
+		sortByColumn: Sort
+
+	column Sort
+		dataType: int64
+		sourceColumn: Sort
+		isHidden
+		summarizeBy: none
+
+	partition Dim_Nationality_Group = m
+		mode: import
+		source =
+			#table(type table [#"Nationality Group" = nullable text, #"Sort" = Int64.Type], {
+				{"Group 1", 1},
+				{"Group 2", 2},
+				{"Group 3", 3}
+			})

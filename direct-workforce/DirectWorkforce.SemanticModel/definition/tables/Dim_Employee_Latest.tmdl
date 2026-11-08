@@ -1,0 +1,90 @@
+table Dim_Employee_Latest
+	column EmployeeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column EmployeeName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeName
+
+	column GradeCode
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeCode
+
+	column Location
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Location
+
+	column HOD_Name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HOD_Name
+
+	column Department
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Department
+
+	column ActiveStatus
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ActiveStatus
+
+	partition Dim_Employee_Latest = m
+		mode: import
+		source =
+			#table(type table [#"EmployeeKey" = nullable text, #"EmployeeName" = nullable text, #"GradeCode" = nullable text, #"Location" = nullable text, #"HOD_Name" = nullable text, #"Department" = nullable text, #"ActiveStatus" = nullable text], {
+				{"1", "Demo Worker 001", "G1", "SITE-01", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"2", "Demo Worker 002", "G2", "SITE-02", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"3", "Demo Worker 003", "G3", "SITE-03", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"4", "Demo Worker 004", "G4", "SITE-01", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"5", "Demo Worker 005", "G1", "SITE-02", "TEAM-01", "Demo Department 02 - 0001", "Inactive"},
+				{"6", "Demo Worker 006", "G2", "SITE-03", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"7", "Demo Worker 007", "G3", "SITE-01", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"8", "Demo Worker 008", "G4", "SITE-02", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"9", "Demo Worker 009", "G1", "SITE-03", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"10", "Demo Worker 010", "G2", "SITE-01", "TEAM-02", "Demo Department 03 - 0002", "Inactive"},
+				{"11", "Demo Worker 011", "G3", "SITE-02", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"12", "Demo Worker 012", "G4", "SITE-03", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"13", "Demo Worker 013", "G1", "SITE-01", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"14", "Demo Worker 014", "G2", "SITE-02", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"15", "Demo Worker 015", "G3", "SITE-03", "TEAM-03", "Demo Department 04 - 0003", "Inactive"},
+				{"16", "Demo Worker 016", "G4", "SITE-01", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"17", "Demo Worker 017", "G1", "SITE-02", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"18", "Demo Worker 018", "G2", "SITE-03", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"19", "Demo Worker 019", "G3", "SITE-01", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"20", "Demo Worker 020", "G4", "SITE-02", "TEAM-04", "Demo Department 01 - 0004", "Inactive"},
+				{"21", "Demo Worker 021", "G1", "SITE-03", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"22", "Demo Worker 022", "G2", "SITE-01", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"23", "Demo Worker 023", "G3", "SITE-02", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"24", "Demo Worker 024", "G4", "SITE-03", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"25", "Demo Worker 025", "G1", "SITE-01", "TEAM-01", "Demo Department 02 - 0001", "Inactive"},
+				{"26", "Demo Worker 026", "G2", "SITE-02", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"27", "Demo Worker 027", "G3", "SITE-03", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"28", "Demo Worker 028", "G4", "SITE-01", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"29", "Demo Worker 029", "G1", "SITE-02", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"30", "Demo Worker 030", "G2", "SITE-03", "TEAM-02", "Demo Department 03 - 0002", "Inactive"},
+				{"31", "Demo Worker 031", "G3", "SITE-01", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"32", "Demo Worker 032", "G4", "SITE-02", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"33", "Demo Worker 033", "G1", "SITE-03", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"34", "Demo Worker 034", "G2", "SITE-01", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"35", "Demo Worker 035", "G3", "SITE-02", "TEAM-03", "Demo Department 04 - 0003", "Inactive"},
+				{"36", "Demo Worker 036", "G4", "SITE-03", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"37", "Demo Worker 037", "G1", "SITE-01", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"38", "Demo Worker 038", "G2", "SITE-02", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"39", "Demo Worker 039", "G3", "SITE-03", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"40", "Demo Worker 040", "G4", "SITE-01", "TEAM-04", "Demo Department 01 - 0004", "Inactive"},
+				{"41", "Demo Worker 041", "G1", "SITE-02", "TEAM-01", "Demo Department 02 - 0001", "Active"},
+				{"42", "Demo Worker 042", "G2", "SITE-03", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"43", "Demo Worker 043", "G3", "SITE-01", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"44", "Demo Worker 044", "G4", "SITE-02", "TEAM-04", "Demo Department 01 - 0004", "Active"},
+				{"45", "Demo Worker 045", "G1", "SITE-03", "TEAM-01", "Demo Department 02 - 0001", "Inactive"},
+				{"46", "Demo Worker 046", "G2", "SITE-01", "TEAM-02", "Demo Department 03 - 0002", "Active"},
+				{"47", "Demo Worker 047", "G3", "SITE-02", "TEAM-03", "Demo Department 04 - 0003", "Active"},
+				{"48", "Demo Worker 048", "G4", "SITE-03", "TEAM-04", "Demo Department 01 - 0004", "Active"}
+			})
+

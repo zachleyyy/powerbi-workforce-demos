@@ -1,0 +1,148 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "review_vendor_rate",
+  "position": {
+    "x": 326,
+    "y": 200,
+    "z": 7000,
+    "height": 540,
+    "width": 925,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Attrition Vendor"
+                }
+              },
+              "active": true,
+              "queryRef": "Audit_Data.Attrition Vendor",
+              "nativeQueryRef": "Attrition Vendor"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Vendor Opening HC"
+                }
+              },
+              "queryRef": "Audit_Data.Vendor Opening HC",
+              "nativeQueryRef": "Vendor Opening HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Vendor Closing HC"
+                }
+              },
+              "queryRef": "Audit_Data.Vendor Closing HC",
+              "nativeQueryRef": "Vendor Closing HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Vendor Average HC"
+                }
+              },
+              "queryRef": "Audit_Data.Vendor Average HC",
+              "nativeQueryRef": "Vendor Average HC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Vendor Eligible Exits"
+                }
+              },
+              "queryRef": "Audit_Data.Vendor Eligible Exits",
+              "nativeQueryRef": "Vendor Eligible Exits"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Vendor Conversion Review"
+                }
+              },
+              "queryRef": "Audit_Data.Vendor Conversion Review",
+              "nativeQueryRef": "Vendor Conversion Review"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "Vendor Attrition Rate"
+                }
+              },
+              "queryRef": "Audit_Data.Vendor Attrition Rate",
+              "nativeQueryRef": "Vendor Attrition Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Audit_Data"
+                  }
+                },
+                "Property": "Vendor Attrition Rate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    }
+  }
+}

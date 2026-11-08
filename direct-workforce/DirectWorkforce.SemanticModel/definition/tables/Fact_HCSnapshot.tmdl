@@ -1,0 +1,147 @@
+table Fact_HCSnapshot
+	column EmployeeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column EmployeeCode_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeCode_Source
+
+	column EmployeeName_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeName_Source
+
+	column JoinDate
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: JoinDate
+
+		variation Variation
+			isDefault
+			relationship: 1d17667e-5135-46f2-8357-82e0d70af840
+			defaultHierarchy: LocalDateTable_5c401b7b-1e2b-428b-bc12-212cf7bf6969.'Date Hierarchy'
+
+	column GradeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeKey
+
+	column GradeCode_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeCode_Source
+
+	column SiteKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteKey
+
+	column Location_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Location_Source
+
+	column HODKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODKey
+
+	column HODName_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODName_Source
+
+	column Department_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Department_Source
+
+	column ActiveStatus_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ActiveStatus_Source
+
+	column TerminationDate_Source
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: TerminationDate_Source
+
+		variation Variation
+			isDefault
+			relationship: 2405db37-efdc-4723-8f3c-caef6db72463
+			defaultHierarchy: LocalDateTable_3efacf53-058e-46f6-94f5-5c44c07e5dcc.'Date Hierarchy'
+
+	column DirectOrIndirect
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DirectOrIndirect
+
+	column 'Source.Name'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+	column AssignmentTypeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: AssignmentTypeKey
+
+	partition Fact_HCSnapshot = m
+		mode: import
+		source =
+			#table(type table [#"EmployeeKey" = nullable text, #"EmployeeCode_Source" = nullable text, #"EmployeeName_Source" = nullable text, #"JoinDate" = nullable datetime, #"GradeKey" = nullable text, #"GradeCode_Source" = nullable text, #"SiteKey" = nullable text, #"Location_Source" = nullable text, #"HODKey" = nullable text, #"HODName_Source" = nullable text, #"Department_Source" = nullable text, #"ActiveStatus_Source" = nullable text, #"TerminationDate_Source" = nullable datetime, #"DirectOrIndirect" = nullable text, #"Source.Name" = nullable text, #"AssignmentTypeKey" = nullable text], {
+				{"1", "1", "Demo Worker 001", #datetime(2024, 2, 2, 0, 0, 0), "G1", "G1", "SITE-01", "SITE-01", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"2", "2", "Demo Worker 002", #datetime(2025, 3, 3, 0, 0, 0), "G2", "G2", "SITE-02", "SITE-02", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"3", "3", "Demo Worker 003", #datetime(2023, 4, 4, 0, 0, 0), "G3", "G3", "SITE-03", "SITE-03", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"4", "4", "Demo Worker 004", #datetime(2026, 2, 5, 0, 0, 0), "G4", "G4", "SITE-01", "SITE-01", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"5", "5", "Demo Worker 005", #datetime(2025, 6, 6, 0, 0, 0), "G1", "G1", "SITE-02", "SITE-02", "TEAM-01", "TEAM-01", "Demo Department 02", "Inactive", #datetime(2026, 3, 12, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Employee"},
+				{"6", "6", "Demo Worker 006", #datetime(2023, 7, 7, 0, 0, 0), "G2", "G2", "SITE-03", "SITE-03", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"7", "7", "Demo Worker 007", #datetime(2024, 8, 8, 0, 0, 0), "G3", "G3", "SITE-01", "SITE-01", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"8", "8", "Demo Worker 008", #datetime(2026, 3, 9, 0, 0, 0), "G4", "G4", "SITE-02", "SITE-02", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"9", "9", "Demo Worker 009", #datetime(2023, 10, 10, 0, 0, 0), "G1", "G1", "SITE-03", "SITE-03", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"10", "10", "Demo Worker 010", #datetime(2024, 11, 11, 0, 0, 0), "G2", "G2", "SITE-01", "SITE-01", "TEAM-02", "TEAM-02", "Demo Department 03", "Inactive", #datetime(2026, 2, 17, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"11", "11", "Demo Worker 011", #datetime(2025, 12, 12, 0, 0, 0), "G3", "G3", "SITE-02", "SITE-02", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"12", "12", "Demo Worker 012", #datetime(2026, 1, 13, 0, 0, 0), "G4", "G4", "SITE-03", "SITE-03", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"13", "13", "Demo Worker 013", #datetime(2024, 2, 14, 0, 0, 0), "G1", "G1", "SITE-01", "SITE-01", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"14", "14", "Demo Worker 014", #datetime(2025, 3, 15, 0, 0, 0), "G2", "G2", "SITE-02", "SITE-02", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"15", "15", "Demo Worker 015", #datetime(2023, 4, 16, 0, 0, 0), "G3", "G3", "SITE-03", "SITE-03", "TEAM-03", "TEAM-03", "Demo Department 04", "Inactive", #datetime(2026, 1, 22, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Employee"},
+				{"16", "16", "Demo Worker 016", #datetime(2026, 2, 17, 0, 0, 0), "G4", "G4", "SITE-01", "SITE-01", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"17", "17", "Demo Worker 017", #datetime(2025, 6, 18, 0, 0, 0), "G1", "G1", "SITE-02", "SITE-02", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"18", "18", "Demo Worker 018", #datetime(2023, 7, 19, 0, 0, 0), "G2", "G2", "SITE-03", "SITE-03", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"19", "19", "Demo Worker 019", #datetime(2024, 8, 20, 0, 0, 0), "G3", "G3", "SITE-01", "SITE-01", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"20", "20", "Demo Worker 020", #datetime(2026, 3, 21, 0, 0, 0), "G4", "G4", "SITE-02", "SITE-02", "TEAM-04", "TEAM-04", "Demo Department 01", "Inactive", #datetime(2026, 3, 26, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"21", "21", "Demo Worker 021", #datetime(2023, 10, 22, 0, 0, 0), "G1", "G1", "SITE-03", "SITE-03", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"22", "22", "Demo Worker 022", #datetime(2024, 11, 23, 0, 0, 0), "G2", "G2", "SITE-01", "SITE-01", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"23", "23", "Demo Worker 023", #datetime(2025, 12, 24, 0, 0, 0), "G3", "G3", "SITE-02", "SITE-02", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"24", "24", "Demo Worker 024", #datetime(2026, 1, 25, 0, 0, 0), "G4", "G4", "SITE-03", "SITE-03", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"25", "25", "Demo Worker 025", #datetime(2024, 2, 1, 0, 0, 0), "G1", "G1", "SITE-01", "SITE-01", "TEAM-01", "TEAM-01", "Demo Department 02", "Inactive", #datetime(2026, 2, 12, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Employee"},
+				{"26", "26", "Demo Worker 026", #datetime(2025, 3, 2, 0, 0, 0), "G2", "G2", "SITE-02", "SITE-02", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"27", "27", "Demo Worker 027", #datetime(2023, 4, 3, 0, 0, 0), "G3", "G3", "SITE-03", "SITE-03", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"28", "28", "Demo Worker 028", #datetime(2026, 2, 4, 0, 0, 0), "G4", "G4", "SITE-01", "SITE-01", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"29", "29", "Demo Worker 029", #datetime(2025, 6, 5, 0, 0, 0), "G1", "G1", "SITE-02", "SITE-02", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"30", "30", "Demo Worker 030", #datetime(2023, 7, 6, 0, 0, 0), "G2", "G2", "SITE-03", "SITE-03", "TEAM-02", "TEAM-02", "Demo Department 03", "Inactive", #datetime(2026, 1, 17, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"31", "31", "Demo Worker 031", #datetime(2024, 8, 7, 0, 0, 0), "G3", "G3", "SITE-01", "SITE-01", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"32", "32", "Demo Worker 032", #datetime(2026, 3, 8, 0, 0, 0), "G4", "G4", "SITE-02", "SITE-02", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"33", "33", "Demo Worker 033", #datetime(2023, 10, 9, 0, 0, 0), "G1", "G1", "SITE-03", "SITE-03", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"34", "34", "Demo Worker 034", #datetime(2024, 11, 10, 0, 0, 0), "G2", "G2", "SITE-01", "SITE-01", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"35", "35", "Demo Worker 035", #datetime(2025, 12, 11, 0, 0, 0), "G3", "G3", "SITE-02", "SITE-02", "TEAM-03", "TEAM-03", "Demo Department 04", "Inactive", #datetime(2026, 3, 22, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Employee"},
+				{"36", "36", "Demo Worker 036", #datetime(2026, 1, 12, 0, 0, 0), "G4", "G4", "SITE-03", "SITE-03", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"37", "37", "Demo Worker 037", #datetime(2024, 2, 13, 0, 0, 0), "G1", "G1", "SITE-01", "SITE-01", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"38", "38", "Demo Worker 038", #datetime(2025, 3, 14, 0, 0, 0), "G2", "G2", "SITE-02", "SITE-02", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"39", "39", "Demo Worker 039", #datetime(2023, 4, 15, 0, 0, 0), "G3", "G3", "SITE-03", "SITE-03", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"40", "40", "Demo Worker 040", #datetime(2026, 2, 16, 0, 0, 0), "G4", "G4", "SITE-01", "SITE-01", "TEAM-04", "TEAM-04", "Demo Department 01", "Inactive", #datetime(2026, 2, 21, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"41", "41", "Demo Worker 041", #datetime(2025, 6, 17, 0, 0, 0), "G1", "G1", "SITE-02", "SITE-02", "TEAM-01", "TEAM-01", "Demo Department 02", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"42", "42", "Demo Worker 042", #datetime(2023, 7, 18, 0, 0, 0), "G2", "G2", "SITE-03", "SITE-03", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"43", "43", "Demo Worker 043", #datetime(2024, 8, 19, 0, 0, 0), "G3", "G3", "SITE-01", "SITE-01", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"44", "44", "Demo Worker 044", #datetime(2026, 3, 20, 0, 0, 0), "G4", "G4", "SITE-02", "SITE-02", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"45", "45", "Demo Worker 045", #datetime(2023, 10, 21, 0, 0, 0), "G1", "G1", "SITE-03", "SITE-03", "TEAM-01", "TEAM-01", "Demo Department 02", "Inactive", #datetime(2026, 1, 12, 0, 0, 0), "DIRECT DL", "synthetic-demo", "Employee"},
+				{"46", "46", "Demo Worker 046", #datetime(2024, 11, 22, 0, 0, 0), "G2", "G2", "SITE-01", "SITE-01", "TEAM-02", "TEAM-02", "Demo Department 03", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"},
+				{"47", "47", "Demo Worker 047", #datetime(2025, 12, 23, 0, 0, 0), "G3", "G3", "SITE-02", "SITE-02", "TEAM-03", "TEAM-03", "Demo Department 04", "Active", null, "DIRECT DL", "synthetic-demo", "Employee"},
+				{"48", "48", "Demo Worker 048", #datetime(2026, 1, 24, 0, 0, 0), "G4", "G4", "SITE-03", "SITE-03", "TEAM-04", "TEAM-04", "Demo Department 01", "Active", null, "DIRECT DL", "synthetic-demo", "Contingent Worker"}
+			})
+

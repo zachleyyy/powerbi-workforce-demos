@@ -1,0 +1,185 @@
+table HC_Current
+
+
+
+	column PersonNumber
+		dataType: string
+		sourceColumn: PersonNumber
+		summarizeBy: none
+
+	column LegalFullName
+		dataType: string
+		sourceColumn: LegalFullName
+		summarizeBy: none
+
+	column HireDate
+		dataType: dateTime
+		sourceColumn: HireDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column TerminationDate
+		dataType: dateTime
+		sourceColumn: TerminationDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column 'Employee Type'
+		dataType: string
+		sourceColumn: Employee Type
+		summarizeBy: none
+
+	column Location
+		dataType: string
+		sourceColumn: Location
+		summarizeBy: none
+
+	column DirectOrIndirect
+		dataType: string
+		sourceColumn: DirectOrIndirect
+		summarizeBy: none
+
+	column Supervisor
+		dataType: string
+		sourceColumn: Supervisor
+		summarizeBy: none
+
+	column Nationality
+		dataType: string
+		sourceColumn: Nationality
+		summarizeBy: none
+
+	column Gender
+		dataType: string
+		sourceColumn: Gender
+		summarizeBy: none
+
+	column Vendor
+		dataType: string
+		sourceColumn: Vendor
+		summarizeBy: none
+
+	column Manager
+		dataType: string
+		sourceColumn: Manager
+		summarizeBy: none
+
+	column HOD
+		dataType: string
+		sourceColumn: HOD
+		summarizeBy: none
+
+	column SnapshotDate
+		dataType: dateTime
+		sourceColumn: SnapshotDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column SourceFile
+		dataType: string
+		sourceColumn: SourceFile
+		summarizeBy: none
+
+	column 'Resource Code'
+		dataType: string
+		sourceColumn: Resource Code
+		summarizeBy: none
+
+	column Area
+		dataType: string
+		sourceColumn: Area
+		summarizeBy: none
+
+	column 'Product Line'
+		dataType: string
+		sourceColumn: Product Line
+		summarizeBy: none
+
+	column Product
+		dataType: string
+		sourceColumn: Product
+		summarizeBy: none
+
+	column DateOfBirth
+		dataType: dateTime
+		sourceColumn: DateOfBirth
+		formatString: Long Date
+		summarizeBy: none
+
+	column TerminationReason
+		dataType: string
+		sourceColumn: TerminationReason
+		summarizeBy: none
+
+	column AssignmentNumber
+		dataType: string
+		sourceColumn: AssignmentNumber
+		summarizeBy: none
+
+	column EmploymentEventKey
+		dataType: string
+		sourceColumn: EmploymentEventKey
+		isHidden
+		summarizeBy: none
+
+	column ConversionReviewStatus
+		dataType: string
+		sourceColumn: ConversionReviewStatus
+		summarizeBy: none
+
+	column IsVerifiedInternalConversion
+		dataType: boolean
+		sourceColumn: IsVerifiedInternalConversion
+		summarizeBy: none
+
+	column NeedsConversionReview
+		dataType: boolean
+		sourceColumn: NeedsConversionReview
+		summarizeBy: none
+
+	column SuccessorAssignmentNumber
+		dataType: string
+		sourceColumn: SuccessorAssignmentNumber
+		summarizeBy: none
+
+	partition HC_Current = m
+		mode: import
+		source =
+			#table(type table [#"PersonNumber" = nullable text, #"LegalFullName" = nullable text, #"HireDate" = nullable datetime, #"TerminationDate" = nullable datetime, #"Employee Type" = nullable text, #"Location" = nullable text, #"DirectOrIndirect" = nullable text, #"Supervisor" = nullable text, #"Nationality" = nullable text, #"Gender" = nullable text, #"Vendor" = nullable text, #"Manager" = nullable text, #"HOD" = nullable text, #"SnapshotDate" = nullable datetime, #"SourceFile" = nullable text, #"Resource Code" = nullable text, #"Area" = nullable text, #"Product Line" = nullable text, #"Product" = nullable text, #"DateOfBirth" = nullable datetime, #"TerminationReason" = nullable text, #"AssignmentNumber" = nullable text, #"EmploymentEventKey" = nullable text, #"ConversionReviewStatus" = nullable text, #"IsVerifiedInternalConversion" = nullable logical, #"NeedsConversionReview" = nullable logical, #"SuccessorAssignmentNumber" = nullable text], {
+				{"DEMO-013", "Demo Person 013", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 1", "Direct", "Supervisor 5", "Region 1", "Category A", "Vendor 1", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1993, 1, 15, 0, 0, 0), null, "ASSIGN-013", "EVENT-013", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-014", "Demo Person 014", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 2", "Direct", "Supervisor 6", "Region 2", "Category B", "Vendor 2", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1994, 1, 15, 0, 0, 0), null, "ASSIGN-014", "EVENT-014", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-015", "Demo Person 015", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 3", "Direct", "Supervisor 7", "Region 3", "Category A", "Vendor 3", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1995, 1, 15, 0, 0, 0), null, "ASSIGN-015", "EVENT-015", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-016", "Demo Person 016", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 1", "Direct", "Supervisor 8", "Region 1", "Category B", "Vendor 1", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1996, 1, 15, 0, 0, 0), null, "ASSIGN-016", "EVENT-016", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-017", "Demo Person 017", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 2", "Direct", "Supervisor 1", "Region 2", "Category A", "Vendor 2", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1997, 1, 15, 0, 0, 0), null, "ASSIGN-017", "EVENT-017", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-018", "Demo Person 018", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 3", "Direct", "Supervisor 2", "Region 3", "Category B", "Vendor 3", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1998, 1, 15, 0, 0, 0), null, "ASSIGN-018", "EVENT-018", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-019", "Demo Person 019", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 1", "Direct", "Supervisor 3", "Region 1", "Category A", "Vendor 1", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1999, 1, 15, 0, 0, 0), null, "ASSIGN-019", "EVENT-019", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-020", "Demo Person 020", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 2", "Direct", "Supervisor 4", "Region 2", "Category B", "Vendor 2", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1980, 1, 15, 0, 0, 0), null, "ASSIGN-020", "EVENT-020", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-021", "Demo Person 021", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 3", "Direct", "Supervisor 5", "Region 3", "Category A", "Vendor 3", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1981, 1, 15, 0, 0, 0), null, "ASSIGN-021", "EVENT-021", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-022", "Demo Person 022", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 1", "Direct", "Supervisor 6", "Region 1", "Category B", "Vendor 1", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1982, 1, 15, 0, 0, 0), null, "ASSIGN-022", "EVENT-022", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-023", "Demo Person 023", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 2", "Direct", "Supervisor 7", "Region 2", "Category A", "Vendor 2", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1983, 1, 15, 0, 0, 0), null, "ASSIGN-023", "EVENT-023", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-024", "Demo Person 024", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 3", "Direct", "Supervisor 8", "Region 3", "Category B", "Vendor 3", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1984, 1, 15, 0, 0, 0), null, "ASSIGN-024", "EVENT-024", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-025", "Demo Person 025", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 1", "Direct", "Supervisor 1", "Region 1", "Category A", "Vendor 1", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1985, 1, 15, 0, 0, 0), null, "ASSIGN-025", "EVENT-025", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-026", "Demo Person 026", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 2", "Direct", "Supervisor 2", "Region 2", "Category B", "Vendor 2", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1986, 1, 15, 0, 0, 0), null, "ASSIGN-026", "EVENT-026", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-027", "Demo Person 027", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 3", "Direct", "Supervisor 3", "Region 3", "Category A", "Vendor 3", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1987, 1, 15, 0, 0, 0), null, "ASSIGN-027", "EVENT-027", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-028", "Demo Person 028", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 1", "Direct", "Supervisor 4", "Region 1", "Category B", "Vendor 1", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1988, 1, 15, 0, 0, 0), null, "ASSIGN-028", "EVENT-028", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-029", "Demo Person 029", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 2", "Direct", "Supervisor 5", "Region 2", "Category A", "Vendor 2", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1989, 1, 15, 0, 0, 0), null, "ASSIGN-029", "EVENT-029", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-030", "Demo Person 030", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 3", "Direct", "Supervisor 6", "Region 3", "Category B", "Vendor 3", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1990, 1, 15, 0, 0, 0), null, "ASSIGN-030", "EVENT-030", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-031", "Demo Person 031", #datetime(2024, 1, 1, 0, 0, 0), null, "Employee", "Site 1", "Direct", "Supervisor 7", "Region 1", "Category A", "Vendor 1", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1991, 1, 15, 0, 0, 0), null, "ASSIGN-031", "EVENT-031", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-032", "Demo Person 032", #datetime(2024, 1, 1, 0, 0, 0), null, "Contingent Worker", "Site 2", "Direct", "Supervisor 8", "Region 2", "Category B", "Vendor 2", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1992, 1, 15, 0, 0, 0), null, "ASSIGN-032", "EVENT-032", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-033", "Demo Person 033", #datetime(2025, 1, 5, 0, 0, 0), null, "Employee", "Site 3", "Direct", "Supervisor 1", "Region 3", "Category A", "Vendor 3", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1993, 1, 15, 0, 0, 0), null, "ASSIGN-033", "EVENT-033", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-034", "Demo Person 034", #datetime(2025, 2, 5, 0, 0, 0), null, "Contingent Worker", "Site 1", "Direct", "Supervisor 2", "Region 1", "Category B", "Vendor 1", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1994, 1, 15, 0, 0, 0), null, "ASSIGN-034", "EVENT-034", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-035", "Demo Person 035", #datetime(2025, 3, 5, 0, 0, 0), null, "Employee", "Site 2", "Direct", "Supervisor 3", "Region 2", "Category A", "Vendor 2", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1995, 1, 15, 0, 0, 0), null, "ASSIGN-035", "EVENT-035", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-036", "Demo Person 036", #datetime(2025, 4, 5, 0, 0, 0), null, "Contingent Worker", "Site 3", "Direct", "Supervisor 4", "Region 3", "Category B", "Vendor 3", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1996, 1, 15, 0, 0, 0), null, "ASSIGN-036", "EVENT-036", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-037", "Demo Person 037", #datetime(2025, 5, 5, 0, 0, 0), null, "Employee", "Site 1", "Direct", "Supervisor 5", "Region 1", "Category A", "Vendor 1", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1997, 1, 15, 0, 0, 0), null, "ASSIGN-037", "EVENT-037", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-038", "Demo Person 038", #datetime(2025, 6, 5, 0, 0, 0), null, "Contingent Worker", "Site 2", "Direct", "Supervisor 6", "Region 2", "Category B", "Vendor 2", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1998, 1, 15, 0, 0, 0), null, "ASSIGN-038", "EVENT-038", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-039", "Demo Person 039", #datetime(2025, 7, 5, 0, 0, 0), null, "Employee", "Site 3", "Direct", "Supervisor 7", "Region 3", "Category A", "Vendor 3", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1999, 1, 15, 0, 0, 0), null, "ASSIGN-039", "EVENT-039", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-040", "Demo Person 040", #datetime(2025, 8, 5, 0, 0, 0), null, "Contingent Worker", "Site 1", "Direct", "Supervisor 8", "Region 1", "Category B", "Vendor 1", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1980, 1, 15, 0, 0, 0), null, "ASSIGN-040", "EVENT-040", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-041", "Demo Person 041", #datetime(2025, 9, 5, 0, 0, 0), null, "Employee", "Site 2", "Direct", "Supervisor 1", "Region 2", "Category A", "Vendor 2", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1981, 1, 15, 0, 0, 0), null, "ASSIGN-041", "EVENT-041", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-042", "Demo Person 042", #datetime(2025, 10, 5, 0, 0, 0), null, "Contingent Worker", "Site 3", "Direct", "Supervisor 2", "Region 3", "Category B", "Vendor 3", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1982, 1, 15, 0, 0, 0), null, "ASSIGN-042", "EVENT-042", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-043", "Demo Person 043", #datetime(2025, 11, 5, 0, 0, 0), null, "Employee", "Site 1", "Direct", "Supervisor 3", "Region 1", "Category A", "Vendor 1", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1983, 1, 15, 0, 0, 0), null, "ASSIGN-043", "EVENT-043", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-044", "Demo Person 044", #datetime(2025, 12, 5, 0, 0, 0), null, "Contingent Worker", "Site 2", "Direct", "Supervisor 4", "Region 2", "Category B", "Vendor 2", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1984, 1, 15, 0, 0, 0), null, "ASSIGN-044", "EVENT-044", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-045", "Demo Person 045", #datetime(2025, 1, 5, 0, 0, 0), null, "Employee", "Site 3", "Direct", "Supervisor 5", "Region 3", "Category A", "Vendor 3", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-1", "Area 1", "Line 1", "Product 1", #datetime(1985, 1, 15, 0, 0, 0), null, "ASSIGN-045", "EVENT-045", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-046", "Demo Person 046", #datetime(2025, 2, 5, 0, 0, 0), null, "Contingent Worker", "Site 1", "Direct", "Supervisor 6", "Region 1", "Category B", "Vendor 1", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-2", "Area 2", "Line 2", "Product 2", #datetime(1986, 1, 15, 0, 0, 0), null, "ASSIGN-046", "EVENT-046", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-047", "Demo Person 047", #datetime(2025, 3, 5, 0, 0, 0), null, "Employee", "Site 2", "Direct", "Supervisor 7", "Region 2", "Category A", "Vendor 2", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-3", "Area 3", "Line 3", "Product 3", #datetime(1987, 1, 15, 0, 0, 0), null, "ASSIGN-047", "EVENT-047", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"},
+				{"DEMO-048", "Demo Person 048", #datetime(2025, 4, 5, 0, 0, 0), null, "Contingent Worker", "Site 3", "Direct", "Supervisor 8", "Region 3", "Category B", "Vendor 3", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", "RESOURCE-4", "Area 4", "Line 4", "Product 4", #datetime(1988, 1, 15, 0, 0, 0), null, "ASSIGN-048", "EVENT-048", "Not applicable", false, false, "Synthetic SuccessorAssignmentNumber"}
+			})

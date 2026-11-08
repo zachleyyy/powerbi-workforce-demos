@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "0000000000000000c364",
+  "position": {
+    "x": 1098,
+    "y": 98,
+    "z": 4000,
+    "height": 108,
+    "width": 370,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Audit_Data"
+                    }
+                  },
+                  "Property": "CW Terminations"
+                }
+              },
+              "queryRef": "Audit_Data.CW Terminations",
+              "nativeQueryRef": "CW Terminations"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

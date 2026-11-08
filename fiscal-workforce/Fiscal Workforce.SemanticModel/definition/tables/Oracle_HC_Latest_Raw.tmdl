@@ -1,0 +1,447 @@
+table Oracle_HC_Latest_Raw
+
+
+
+	column PersonNumber
+		dataType: string
+		sourceColumn: PersonNumber
+		summarizeBy: none
+
+	column AssignmentNumber
+		dataType: string
+		sourceColumn: AssignmentNumber
+		summarizeBy: none
+
+	column LegacyID
+		dataType: string
+		sourceColumn: LegacyID
+		summarizeBy: none
+
+	column Name
+		dataType: string
+		sourceColumn: Name
+		summarizeBy: none
+
+	column LegalFullName
+		dataType: string
+		sourceColumn: LegalFullName
+		summarizeBy: none
+
+	column FirstName
+		dataType: string
+		sourceColumn: FirstName
+		summarizeBy: none
+
+	column MiddleName
+		dataType: string
+		sourceColumn: MiddleName
+		summarizeBy: none
+
+	column LastName
+		dataType: string
+		sourceColumn: LastName
+		summarizeBy: none
+
+	column HireDate
+		dataType: dateTime
+		sourceColumn: HireDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column OriginalHireDate
+		dataType: dateTime
+		sourceColumn: OriginalHireDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column AdjustedServiceDate
+		dataType: dateTime
+		sourceColumn: AdjustedServiceDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column TerminationDate
+		dataType: dateTime
+		sourceColumn: TerminationDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column TerminationType
+		dataType: string
+		sourceColumn: TerminationType
+		summarizeBy: none
+
+	column TerminationReason
+		dataType: string
+		sourceColumn: TerminationReason
+		summarizeBy: none
+
+	column AssignmentType
+		dataType: string
+		sourceColumn: AssignmentType
+		summarizeBy: none
+
+	column ProbationEndDate
+		dataType: dateTime
+		sourceColumn: ProbationEndDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column CompetencyDate
+		dataType: dateTime
+		sourceColumn: CompetencyDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column HourlyOrSalaried
+		dataType: string
+		sourceColumn: HourlyOrSalaried
+		summarizeBy: none
+
+	column GradeCode
+		dataType: string
+		sourceColumn: GradeCode
+		summarizeBy: none
+
+	column ActiveStatus
+		dataType: string
+		sourceColumn: ActiveStatus
+		summarizeBy: none
+
+	column OvertimeEligibility
+		dataType: string
+		sourceColumn: OvertimeEligibility
+		summarizeBy: none
+
+	column AssignmentCategory
+		dataType: string
+		sourceColumn: AssignmentCategory
+		summarizeBy: none
+
+	column Location
+		dataType: string
+		sourceColumn: Location
+		summarizeBy: none
+
+	column Country
+		dataType: string
+		sourceColumn: Country
+		summarizeBy: none
+
+	column LegalEmployer
+		dataType: string
+		sourceColumn: LegalEmployer
+		summarizeBy: none
+
+	column BusinessUnitName
+		dataType: string
+		sourceColumn: BusinessUnitName
+		summarizeBy: none
+
+	column Department
+		dataType: string
+		sourceColumn: Department
+		summarizeBy: none
+
+	column CostCenterCode
+		dataType: string
+		sourceColumn: CostCenterCode
+		summarizeBy: none
+
+	column DirectOrIndirect
+		dataType: string
+		sourceColumn: DirectOrIndirect
+		summarizeBy: none
+
+	column JobCode
+		dataType: string
+		sourceColumn: JobCode
+		summarizeBy: none
+
+	column JobName
+		dataType: string
+		sourceColumn: JobName
+		summarizeBy: none
+
+	column JobFamily
+		dataType: string
+		sourceColumn: JobFamily
+		summarizeBy: none
+
+	column JobFunction
+		dataType: string
+		sourceColumn: JobFunction
+		summarizeBy: none
+
+	column JobSubFamily
+		dataType: string
+		sourceColumn: JobSubFamily
+		summarizeBy: none
+
+	column CareerStream
+		dataType: string
+		sourceColumn: CareerStream
+		summarizeBy: none
+
+	column BunissTittle
+		dataType: string
+		sourceColumn: BunissTittle
+		summarizeBy: none
+
+	column Segment
+		dataType: string
+		sourceColumn: Segment
+		summarizeBy: none
+
+	column BusinessUnit
+		dataType: string
+		sourceColumn: BusinessUnit
+		summarizeBy: none
+
+	column ProductLine
+		dataType: string
+		sourceColumn: ProductLine
+		summarizeBy: none
+
+	column HYPERIONDepartment
+		dataType: string
+		sourceColumn: HYPERIONDepartment
+		summarizeBy: none
+
+	column PriorYearsExperience
+		dataType: double
+		sourceColumn: PriorYearsExperience
+		summarizeBy: sum
+
+	column Supervisor_Name
+		dataType: string
+		sourceColumn: Supervisor_Name
+		summarizeBy: none
+
+	column ManagerPersonNumber
+		dataType: string
+		sourceColumn: ManagerPersonNumber
+		summarizeBy: none
+
+	column PhoneType
+		dataType: string
+		sourceColumn: PhoneType
+		summarizeBy: none
+
+	column CountryCodeNumber
+		dataType: string
+		sourceColumn: CountryCodeNumber
+		summarizeBy: none
+
+	column MobilePhone
+		dataType: string
+		sourceColumn: MobilePhone
+		summarizeBy: none
+
+	column WorkEmail
+		dataType: string
+		sourceColumn: WorkEmail
+		summarizeBy: none
+
+	column Nationality
+		dataType: string
+		sourceColumn: Nationality
+		summarizeBy: none
+
+	column NIType
+		dataType: string
+		sourceColumn: NIType
+		summarizeBy: none
+
+	column NationalID
+		dataType: string
+		sourceColumn: NationalID
+		summarizeBy: none
+
+	column MaritalStatus
+		dataType: string
+		sourceColumn: MaritalStatus
+		summarizeBy: none
+
+	column Gender
+		dataType: string
+		sourceColumn: Gender
+		summarizeBy: none
+
+	column HighestEduLvl
+		dataType: string
+		sourceColumn: HighestEduLvl
+		summarizeBy: none
+
+	column Ethnicity
+		dataType: string
+		sourceColumn: Ethnicity
+		summarizeBy: none
+
+	column Religion
+		dataType: string
+		sourceColumn: Religion
+		summarizeBy: none
+
+	column DateOfBirth
+		dataType: dateTime
+		sourceColumn: DateOfBirth
+		formatString: Long Date
+		summarizeBy: none
+
+	column Age
+		dataType: int64
+		sourceColumn: Age
+		formatString: 0
+		summarizeBy: sum
+
+	column YearOfService
+		dataType: double
+		sourceColumn: YearOfService
+		summarizeBy: sum
+
+	column Locker
+		dataType: string
+		sourceColumn: Locker
+		summarizeBy: none
+
+	column Hostel
+		dataType: string
+		sourceColumn: Hostel
+		summarizeBy: none
+
+	column TransportMode
+		dataType: string
+		sourceColumn: TransportMode
+		summarizeBy: none
+
+	column 'Bus Route'
+		dataType: string
+		sourceColumn: Bus Route
+		summarizeBy: none
+
+	column Carplate
+		dataType: string
+		sourceColumn: Carplate
+		summarizeBy: none
+
+	column 'Agency Company'
+		dataType: string
+		sourceColumn: Agency Company
+		summarizeBy: none
+
+	column Manager_Name
+		dataType: string
+		sourceColumn: Manager_Name
+		summarizeBy: none
+
+	column HOD_Name
+		dataType: string
+		sourceColumn: HOD_Name
+		summarizeBy: none
+
+	column SnapshotDate
+		dataType: dateTime
+		sourceColumn: SnapshotDate
+		formatString: Long Date
+		summarizeBy: none
+
+	column SourceFile
+		dataType: string
+		sourceColumn: SourceFile
+		summarizeBy: none
+
+	column ModifiedDate
+		dataType: dateTime
+		sourceColumn: ModifiedDate
+		formatString: General Date
+		summarizeBy: none
+
+	column DerivedProjectCode
+		dataType: string
+		sourceColumn: DerivedProjectCode
+		summarizeBy: none
+
+	column 'Oracle Project Code'
+		dataType: string
+		sourceColumn: Oracle Project Code
+		summarizeBy: none
+
+	column 'Oracle Project Code Description'
+		dataType: string
+		sourceColumn: Oracle Project Code Description
+		summarizeBy: none
+
+	column 'Resource Code'
+		dataType: string
+		sourceColumn: Resource Code
+		summarizeBy: none
+
+	column Area
+		dataType: string
+		sourceColumn: Area
+		summarizeBy: none
+
+	column 'Product Line'
+		dataType: string
+		sourceColumn: Product Line
+		summarizeBy: none
+
+	column Product
+		dataType: string
+		sourceColumn: Product
+		summarizeBy: none
+
+	partition Oracle_HC_Latest_Raw = m
+		mode: import
+		source =
+			#table(type table [#"PersonNumber" = nullable text, #"AssignmentNumber" = nullable text, #"LegacyID" = nullable text, #"Name" = nullable text, #"LegalFullName" = nullable text, #"FirstName" = nullable text, #"MiddleName" = nullable text, #"LastName" = nullable text, #"HireDate" = nullable datetime, #"OriginalHireDate" = nullable datetime, #"AdjustedServiceDate" = nullable datetime, #"TerminationDate" = nullable datetime, #"TerminationType" = nullable text, #"TerminationReason" = nullable text, #"AssignmentType" = nullable text, #"ProbationEndDate" = nullable datetime, #"CompetencyDate" = nullable datetime, #"HourlyOrSalaried" = nullable text, #"GradeCode" = nullable text, #"ActiveStatus" = nullable text, #"OvertimeEligibility" = nullable text, #"AssignmentCategory" = nullable text, #"Location" = nullable text, #"Country" = nullable text, #"LegalEmployer" = nullable text, #"BusinessUnitName" = nullable text, #"Department" = nullable text, #"CostCenterCode" = nullable text, #"DirectOrIndirect" = nullable text, #"JobCode" = nullable text, #"JobName" = nullable text, #"JobFamily" = nullable text, #"JobFunction" = nullable text, #"JobSubFamily" = nullable text, #"CareerStream" = nullable text, #"BunissTittle" = nullable text, #"Segment" = nullable text, #"BusinessUnit" = nullable text, #"ProductLine" = nullable text, #"HYPERIONDepartment" = nullable text, #"PriorYearsExperience" = nullable number, #"Supervisor_Name" = nullable text, #"ManagerPersonNumber" = nullable text, #"PhoneType" = nullable text, #"CountryCodeNumber" = nullable text, #"MobilePhone" = nullable text, #"WorkEmail" = nullable text, #"Nationality" = nullable text, #"NIType" = nullable text, #"NationalID" = nullable text, #"MaritalStatus" = nullable text, #"Gender" = nullable text, #"HighestEduLvl" = nullable text, #"Ethnicity" = nullable text, #"Religion" = nullable text, #"DateOfBirth" = nullable datetime, #"Age" = Int64.Type, #"YearOfService" = nullable number, #"Locker" = nullable text, #"Hostel" = nullable text, #"TransportMode" = nullable text, #"Bus Route" = nullable text, #"Carplate" = nullable text, #"Agency Company" = nullable text, #"Manager_Name" = nullable text, #"HOD_Name" = nullable text, #"SnapshotDate" = nullable datetime, #"SourceFile" = nullable text, #"ModifiedDate" = nullable datetime, #"DerivedProjectCode" = nullable text, #"Oracle Project Code" = nullable text, #"Oracle Project Code Description" = nullable text, #"Resource Code" = nullable text, #"Area" = nullable text, #"Product Line" = nullable text, #"Product" = nullable text], {
+				{"DEMO-001", "ASSIGN-001", "Synthetic LegacyID", "Demo Person 001", "Demo Person 001", "Demo", "Synthetic MiddleName", "Person 001", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 1, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 1", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo001@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1981, 1, 15, 0, 0, 0), 44, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-002", "ASSIGN-002", "Synthetic LegacyID", "Demo Person 002", "Demo Person 002", "Demo", "Synthetic MiddleName", "Person 002", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 2, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 2", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo002@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1982, 1, 15, 0, 0, 0), 43, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-003", "ASSIGN-003", "Synthetic LegacyID", "Demo Person 003", "Demo Person 003", "Demo", "Synthetic MiddleName", "Person 003", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 3, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 3", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo003@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1983, 1, 15, 0, 0, 0), 42, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-004", "ASSIGN-004", "Synthetic LegacyID", "Demo Person 004", "Demo Person 004", "Demo", "Synthetic MiddleName", "Person 004", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 4, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 4", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo004@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1984, 1, 15, 0, 0, 0), 41, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-005", "ASSIGN-005", "Synthetic LegacyID", "Demo Person 005", "Demo Person 005", "Demo", "Synthetic MiddleName", "Person 005", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 5, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 5", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo005@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1985, 1, 15, 0, 0, 0), 40, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-006", "ASSIGN-006", "Synthetic LegacyID", "Demo Person 006", "Demo Person 006", "Demo", "Synthetic MiddleName", "Person 006", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 6, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 6", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo006@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1986, 1, 15, 0, 0, 0), 39, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-007", "ASSIGN-007", "Synthetic LegacyID", "Demo Person 007", "Demo Person 007", "Demo", "Synthetic MiddleName", "Person 007", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 7, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 7", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo007@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1987, 1, 15, 0, 0, 0), 38, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-008", "ASSIGN-008", "Synthetic LegacyID", "Demo Person 008", "Demo Person 008", "Demo", "Synthetic MiddleName", "Person 008", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 8, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 8", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo008@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1988, 1, 15, 0, 0, 0), 37, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-009", "ASSIGN-009", "Synthetic LegacyID", "Demo Person 009", "Demo Person 009", "Demo", "Synthetic MiddleName", "Person 009", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 9, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 1", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo009@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1989, 1, 15, 0, 0, 0), 36, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-010", "ASSIGN-010", "Synthetic LegacyID", "Demo Person 010", "Demo Person 010", "Demo", "Synthetic MiddleName", "Person 010", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 10, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 2", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo010@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1990, 1, 15, 0, 0, 0), 35, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-011", "ASSIGN-011", "Synthetic LegacyID", "Demo Person 011", "Demo Person 011", "Demo", "Synthetic MiddleName", "Person 011", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 11, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 3", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo011@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1991, 1, 15, 0, 0, 0), 34, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-012", "ASSIGN-012", "Synthetic LegacyID", "Demo Person 012", "Demo Person 012", "Demo", "Synthetic MiddleName", "Person 012", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2025, 12, 20, 0, 0, 0), "Synthetic TerminationType", "Demo departure", "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 4", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo012@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1992, 1, 15, 0, 0, 0), 33, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-013", "ASSIGN-013", "Synthetic LegacyID", "Demo Person 013", "Demo Person 013", "Demo", "Synthetic MiddleName", "Person 013", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 5", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo013@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1993, 1, 15, 0, 0, 0), 32, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-014", "ASSIGN-014", "Synthetic LegacyID", "Demo Person 014", "Demo Person 014", "Demo", "Synthetic MiddleName", "Person 014", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 6", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo014@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1994, 1, 15, 0, 0, 0), 31, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-015", "ASSIGN-015", "Synthetic LegacyID", "Demo Person 015", "Demo Person 015", "Demo", "Synthetic MiddleName", "Person 015", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 7", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo015@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1995, 1, 15, 0, 0, 0), 30, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-016", "ASSIGN-016", "Synthetic LegacyID", "Demo Person 016", "Demo Person 016", "Demo", "Synthetic MiddleName", "Person 016", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 8", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo016@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1996, 1, 15, 0, 0, 0), 29, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-017", "ASSIGN-017", "Synthetic LegacyID", "Demo Person 017", "Demo Person 017", "Demo", "Synthetic MiddleName", "Person 017", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 1", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo017@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1997, 1, 15, 0, 0, 0), 28, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-018", "ASSIGN-018", "Synthetic LegacyID", "Demo Person 018", "Demo Person 018", "Demo", "Synthetic MiddleName", "Person 018", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 2", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo018@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1998, 1, 15, 0, 0, 0), 27, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-019", "ASSIGN-019", "Synthetic LegacyID", "Demo Person 019", "Demo Person 019", "Demo", "Synthetic MiddleName", "Person 019", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 3", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo019@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1999, 1, 15, 0, 0, 0), 26, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-020", "ASSIGN-020", "Synthetic LegacyID", "Demo Person 020", "Demo Person 020", "Demo", "Synthetic MiddleName", "Person 020", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 4", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo020@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1980, 1, 15, 0, 0, 0), 45, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-021", "ASSIGN-021", "Synthetic LegacyID", "Demo Person 021", "Demo Person 021", "Demo", "Synthetic MiddleName", "Person 021", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 5", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo021@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1981, 1, 15, 0, 0, 0), 44, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-022", "ASSIGN-022", "Synthetic LegacyID", "Demo Person 022", "Demo Person 022", "Demo", "Synthetic MiddleName", "Person 022", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 6", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo022@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1982, 1, 15, 0, 0, 0), 43, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-023", "ASSIGN-023", "Synthetic LegacyID", "Demo Person 023", "Demo Person 023", "Demo", "Synthetic MiddleName", "Person 023", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 7", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo023@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1983, 1, 15, 0, 0, 0), 42, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-024", "ASSIGN-024", "Synthetic LegacyID", "Demo Person 024", "Demo Person 024", "Demo", "Synthetic MiddleName", "Person 024", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 8", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo024@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1984, 1, 15, 0, 0, 0), 41, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-025", "ASSIGN-025", "Synthetic LegacyID", "Demo Person 025", "Demo Person 025", "Demo", "Synthetic MiddleName", "Person 025", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 1", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo025@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1985, 1, 15, 0, 0, 0), 40, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-026", "ASSIGN-026", "Synthetic LegacyID", "Demo Person 026", "Demo Person 026", "Demo", "Synthetic MiddleName", "Person 026", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 2", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo026@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1986, 1, 15, 0, 0, 0), 39, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-027", "ASSIGN-027", "Synthetic LegacyID", "Demo Person 027", "Demo Person 027", "Demo", "Synthetic MiddleName", "Person 027", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 3", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo027@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1987, 1, 15, 0, 0, 0), 38, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-028", "ASSIGN-028", "Synthetic LegacyID", "Demo Person 028", "Demo Person 028", "Demo", "Synthetic MiddleName", "Person 028", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 4", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo028@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1988, 1, 15, 0, 0, 0), 37, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-029", "ASSIGN-029", "Synthetic LegacyID", "Demo Person 029", "Demo Person 029", "Demo", "Synthetic MiddleName", "Person 029", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 5", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo029@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1989, 1, 15, 0, 0, 0), 36, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-030", "ASSIGN-030", "Synthetic LegacyID", "Demo Person 030", "Demo Person 030", "Demo", "Synthetic MiddleName", "Person 030", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 6", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo030@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1990, 1, 15, 0, 0, 0), 35, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-031", "ASSIGN-031", "Synthetic LegacyID", "Demo Person 031", "Demo Person 031", "Demo", "Synthetic MiddleName", "Person 031", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 7", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo031@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1991, 1, 15, 0, 0, 0), 34, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-032", "ASSIGN-032", "Synthetic LegacyID", "Demo Person 032", "Demo Person 032", "Demo", "Synthetic MiddleName", "Person 032", #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), #datetime(2024, 1, 1, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 8", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo032@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1992, 1, 15, 0, 0, 0), 33, 1.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-033", "ASSIGN-033", "Synthetic LegacyID", "Demo Person 033", "Demo Person 033", "Demo", "Synthetic MiddleName", "Person 033", #datetime(2025, 1, 5, 0, 0, 0), #datetime(2025, 1, 5, 0, 0, 0), #datetime(2025, 1, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 1", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo033@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1993, 1, 15, 0, 0, 0), 32, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-034", "ASSIGN-034", "Synthetic LegacyID", "Demo Person 034", "Demo Person 034", "Demo", "Synthetic MiddleName", "Person 034", #datetime(2025, 2, 5, 0, 0, 0), #datetime(2025, 2, 5, 0, 0, 0), #datetime(2025, 2, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 2", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo034@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1994, 1, 15, 0, 0, 0), 31, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-035", "ASSIGN-035", "Synthetic LegacyID", "Demo Person 035", "Demo Person 035", "Demo", "Synthetic MiddleName", "Person 035", #datetime(2025, 3, 5, 0, 0, 0), #datetime(2025, 3, 5, 0, 0, 0), #datetime(2025, 3, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 3", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo035@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1995, 1, 15, 0, 0, 0), 30, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-036", "ASSIGN-036", "Synthetic LegacyID", "Demo Person 036", "Demo Person 036", "Demo", "Synthetic MiddleName", "Person 036", #datetime(2025, 4, 5, 0, 0, 0), #datetime(2025, 4, 5, 0, 0, 0), #datetime(2025, 4, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 4", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo036@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1996, 1, 15, 0, 0, 0), 29, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-037", "ASSIGN-037", "Synthetic LegacyID", "Demo Person 037", "Demo Person 037", "Demo", "Synthetic MiddleName", "Person 037", #datetime(2025, 5, 5, 0, 0, 0), #datetime(2025, 5, 5, 0, 0, 0), #datetime(2025, 5, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 5", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo037@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1997, 1, 15, 0, 0, 0), 28, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-038", "ASSIGN-038", "Synthetic LegacyID", "Demo Person 038", "Demo Person 038", "Demo", "Synthetic MiddleName", "Person 038", #datetime(2025, 6, 5, 0, 0, 0), #datetime(2025, 6, 5, 0, 0, 0), #datetime(2025, 6, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 6", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo038@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1998, 1, 15, 0, 0, 0), 27, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-039", "ASSIGN-039", "Synthetic LegacyID", "Demo Person 039", "Demo Person 039", "Demo", "Synthetic MiddleName", "Person 039", #datetime(2025, 7, 5, 0, 0, 0), #datetime(2025, 7, 5, 0, 0, 0), #datetime(2025, 7, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 7", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo039@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1999, 1, 15, 0, 0, 0), 26, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-040", "ASSIGN-040", "Synthetic LegacyID", "Demo Person 040", "Demo Person 040", "Demo", "Synthetic MiddleName", "Person 040", #datetime(2025, 8, 5, 0, 0, 0), #datetime(2025, 8, 5, 0, 0, 0), #datetime(2025, 8, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 8", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo040@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1980, 1, 15, 0, 0, 0), 45, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-041", "ASSIGN-041", "Synthetic LegacyID", "Demo Person 041", "Demo Person 041", "Demo", "Synthetic MiddleName", "Person 041", #datetime(2025, 9, 5, 0, 0, 0), #datetime(2025, 9, 5, 0, 0, 0), #datetime(2025, 9, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 1", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo041@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1981, 1, 15, 0, 0, 0), 44, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-042", "ASSIGN-042", "Synthetic LegacyID", "Demo Person 042", "Demo Person 042", "Demo", "Synthetic MiddleName", "Person 042", #datetime(2025, 10, 5, 0, 0, 0), #datetime(2025, 10, 5, 0, 0, 0), #datetime(2025, 10, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 2", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo042@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1982, 1, 15, 0, 0, 0), 43, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-043", "ASSIGN-043", "Synthetic LegacyID", "Demo Person 043", "Demo Person 043", "Demo", "Synthetic MiddleName", "Person 043", #datetime(2025, 11, 5, 0, 0, 0), #datetime(2025, 11, 5, 0, 0, 0), #datetime(2025, 11, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 3", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo043@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1983, 1, 15, 0, 0, 0), 42, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-044", "ASSIGN-044", "Synthetic LegacyID", "Demo Person 044", "Demo Person 044", "Demo", "Synthetic MiddleName", "Person 044", #datetime(2025, 12, 5, 0, 0, 0), #datetime(2025, 12, 5, 0, 0, 0), #datetime(2025, 12, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 4", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo044@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1984, 1, 15, 0, 0, 0), 41, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"},
+				{"DEMO-045", "ASSIGN-045", "Synthetic LegacyID", "Demo Person 045", "Demo Person 045", "Demo", "Synthetic MiddleName", "Person 045", #datetime(2025, 1, 5, 0, 0, 0), #datetime(2025, 1, 5, 0, 0, 0), #datetime(2025, 1, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 5", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo045@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1985, 1, 15, 0, 0, 0), 40, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 1", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-1", "Synthetic project 1", "RESOURCE-1", "Area 1", "Line 1", "Product 1"},
+				{"DEMO-046", "ASSIGN-046", "Synthetic LegacyID", "Demo Person 046", "Demo Person 046", "Demo", "Synthetic MiddleName", "Person 046", #datetime(2025, 2, 5, 0, 0, 0), #datetime(2025, 2, 5, 0, 0, 0), #datetime(2025, 2, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 1", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 6", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo046@example.invalid", "Region 1", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1986, 1, 15, 0, 0, 0), 39, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 2", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-2", "Synthetic project 2", "RESOURCE-2", "Area 2", "Line 2", "Product 2"},
+				{"DEMO-047", "ASSIGN-047", "Synthetic LegacyID", "Demo Person 047", "Demo Person 047", "Demo", "Synthetic MiddleName", "Person 047", #datetime(2025, 3, 5, 0, 0, 0), #datetime(2025, 3, 5, 0, 0, 0), #datetime(2025, 3, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Employee", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 2", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 7", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo047@example.invalid", "Region 2", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category A", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1987, 1, 15, 0, 0, 0), 38, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 3", "Lead 1", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-3", "Synthetic project 3", "RESOURCE-3", "Area 3", "Line 3", "Product 3"},
+				{"DEMO-048", "ASSIGN-048", "Synthetic LegacyID", "Demo Person 048", "Demo Person 048", "Demo", "Synthetic MiddleName", "Person 048", #datetime(2025, 4, 5, 0, 0, 0), #datetime(2025, 4, 5, 0, 0, 0), #datetime(2025, 4, 5, 0, 0, 0), null, "Synthetic TerminationType", null, "Contingent Worker", null, null, "Synthetic HourlyOrSalaried", "Synthetic GradeCode", "Synthetic ActiveStatus", "Synthetic OvertimeEligibility", "Synthetic AssignmentCategory", "Site 3", "Synthetic Country", "Synthetic LegalEmployer", "Synthetic BusinessUnitName", "Synthetic Department", "Synthetic CostCenterCode", "Direct", "Synthetic JobCode", "Synthetic JobName", "Synthetic JobFamily", "Synthetic JobFunction", "Synthetic JobSubFamily", "Synthetic CareerStream", "Synthetic BunissTittle", "Synthetic Segment", "Synthetic BusinessUnit", "Synthetic ProductLine", "Synthetic HYPERIONDepartment", 0, "Supervisor 8", "Synthetic ManagerPersonNumber", "Synthetic PhoneType", "Synthetic CountryCodeNumber", "Synthetic MobilePhone", "demo048@example.invalid", "Region 3", "Synthetic NIType", "Synthetic NationalID", "Synthetic MaritalStatus", "Category B", "Synthetic HighestEduLvl", "Synthetic Ethnicity", "Synthetic Religion", #datetime(1988, 1, 15, 0, 0, 0), 37, 0.0, "Synthetic Locker", "Synthetic Hostel", "Synthetic TransportMode", "Synthetic Bus Route", "Synthetic Carplate", "Synthetic Agency Company", "Manager 4", "Lead 2", #datetime(2025, 12, 31, 0, 0, 0), "Embedded synthetic generator", #datetime(2025, 12, 31, 0, 0, 0), "Synthetic DerivedProjectCode", "PROJECT-4", "Synthetic project 4", "RESOURCE-4", "Area 4", "Line 4", "Product 4"}
+			})

@@ -1,0 +1,230 @@
+table Fact_HCSnapshot
+
+	column EmployeeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column EmployeeCode_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeCode_Source
+
+	column EmployeeName_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: EmployeeName_Source
+
+	column JoinDate
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: JoinDate
+
+		variation Variation
+			isDefault
+			relationship: 1d17667e-5135-46f2-8357-82e0d70af840
+			defaultHierarchy: LocalDateTable_5c401b7b-1e2b-428b-bc12-212cf7bf6969.'Date Hierarchy'
+
+	column GradeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeKey
+
+	column GradeCode_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: GradeCode_Source
+
+	column SiteKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SiteKey
+
+	column Location_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Location_Source
+
+	column HODKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODKey
+
+	column HODName_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: HODName_Source
+
+	column Department_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Department_Source
+
+	column ActiveStatus_Source
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ActiveStatus_Source
+
+	column TerminationDate_Source
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: TerminationDate_Source
+
+		variation Variation
+			isDefault
+			relationship: 2405db37-efdc-4723-8f3c-caef6db72463
+			defaultHierarchy: LocalDateTable_3efacf53-058e-46f6-94f5-5c44c07e5dcc.'Date Hierarchy'
+
+	column DirectOrIndirect
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DirectOrIndirect
+
+	column 'Source.Name'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+	column AssignmentTypeKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: AssignmentTypeKey
+
+	column LaborType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: LaborType
+
+	column NationalityGroup
+		dataType: string
+		summarizeBy: none
+		sourceColumn: NationalityGroup
+
+
+	partition Fact_HCSnapshot = m
+		mode: import
+		source =
+			#table(type table [#"EmployeeKey" = text, #"EmployeeCode_Source" = text, #"EmployeeName_Source" = text, #"JoinDate" = datetime, #"GradeKey" = text, #"GradeCode_Source" = text, #"SiteKey" = text, #"Location_Source" = text, #"HODKey" = text, #"HODName_Source" = text, #"Department_Source" = text, #"ActiveStatus_Source" = text, #"TerminationDate_Source" = nullable datetime, #"DirectOrIndirect" = text, #"Source.Name" = text, #"AssignmentTypeKey" = text, #"LaborType" = text, #"NationalityGroup" = text], {
+				{"1", "1", "Demo Person 001", #datetime(2025,1,3,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,1,5,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"2", "2", "Demo Person 002", #datetime(2025,1,7,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,1,10,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"3", "3", "Demo Person 003", #datetime(2025,1,11,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,1,15,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"4", "4", "Demo Person 004", #datetime(2025,1,15,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,1,20,0,0,0), "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"5", "5", "Demo Person 005", #datetime(2025,1,19,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,1,25,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"6", "6", "Demo Person 006", #datetime(2025,1,23,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,1,30,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"7", "7", "Demo Person 007", #datetime(2025,1,27,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,2,4,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"8", "8", "Demo Person 008", #datetime(2025,1,31,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,2,9,0,0,0), "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"9", "9", "Demo Person 009", #datetime(2025,2,4,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,2,14,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"10", "10", "Demo Person 010", #datetime(2025,2,8,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,2,19,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"11", "11", "Demo Person 011", #datetime(2025,2,12,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,2,24,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"12", "12", "Demo Person 012", #datetime(2025,2,16,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,3,1,0,0,0), "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"13", "13", "Demo Person 013", #datetime(2025,2,20,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,3,6,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"14", "14", "Demo Person 014", #datetime(2025,2,24,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,3,11,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"15", "15", "Demo Person 015", #datetime(2025,2,28,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,3,16,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"16", "16", "Demo Person 016", #datetime(2025,3,4,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,3,21,0,0,0), "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"17", "17", "Demo Person 017", #datetime(2025,3,8,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,3,26,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"18", "18", "Demo Person 018", #datetime(2025,3,12,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,3,31,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"19", "19", "Demo Person 019", #datetime(2025,3,16,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,4,5,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"20", "20", "Demo Person 020", #datetime(2025,3,20,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,4,10,0,0,0), "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"21", "21", "Demo Person 021", #datetime(2025,3,24,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,4,15,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"22", "22", "Demo Person 022", #datetime(2025,3,28,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,4,20,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"23", "23", "Demo Person 023", #datetime(2025,4,1,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,4,25,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"24", "24", "Demo Person 024", #datetime(2025,4,5,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,4,30,0,0,0), "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"25", "25", "Demo Person 025", #datetime(2025,4,9,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,5,5,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"26", "26", "Demo Person 026", #datetime(2025,4,13,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,5,10,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"27", "27", "Demo Person 027", #datetime(2025,4,17,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,5,15,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"28", "28", "Demo Person 028", #datetime(2025,4,21,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Inactive", #datetime(2026,5,20,0,0,0), "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"29", "29", "Demo Person 029", #datetime(2025,4,25,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Inactive", #datetime(2026,5,25,0,0,0), "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"30", "30", "Demo Person 030", #datetime(2025,4,29,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Inactive", #datetime(2026,5,30,0,0,0), "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"31", "31", "Demo Person 031", #datetime(2025,5,3,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"32", "32", "Demo Person 032", #datetime(2025,5,7,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"33", "33", "Demo Person 033", #datetime(2025,5,11,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"34", "34", "Demo Person 034", #datetime(2025,5,15,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"35", "35", "Demo Person 035", #datetime(2025,5,19,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"36", "36", "Demo Person 036", #datetime(2025,5,23,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"37", "37", "Demo Person 037", #datetime(2025,5,27,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"38", "38", "Demo Person 038", #datetime(2025,5,31,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"39", "39", "Demo Person 039", #datetime(2025,6,4,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"40", "40", "Demo Person 040", #datetime(2025,6,8,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"41", "41", "Demo Person 041", #datetime(2025,6,12,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"42", "42", "Demo Person 042", #datetime(2025,6,16,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"43", "43", "Demo Person 043", #datetime(2025,6,20,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"44", "44", "Demo Person 044", #datetime(2025,6,24,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"45", "45", "Demo Person 045", #datetime(2025,6,28,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"46", "46", "Demo Person 046", #datetime(2025,7,2,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"47", "47", "Demo Person 047", #datetime(2025,7,6,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"48", "48", "Demo Person 048", #datetime(2025,7,10,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"49", "49", "Demo Person 049", #datetime(2025,7,14,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"50", "50", "Demo Person 050", #datetime(2025,7,18,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"51", "51", "Demo Person 051", #datetime(2025,7,22,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"52", "52", "Demo Person 052", #datetime(2025,7,26,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"53", "53", "Demo Person 053", #datetime(2025,7,30,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"54", "54", "Demo Person 054", #datetime(2025,8,3,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"55", "55", "Demo Person 055", #datetime(2025,8,7,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"56", "56", "Demo Person 056", #datetime(2025,8,11,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"57", "57", "Demo Person 057", #datetime(2025,8,15,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"58", "58", "Demo Person 058", #datetime(2025,8,19,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"59", "59", "Demo Person 059", #datetime(2025,8,23,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"60", "60", "Demo Person 060", #datetime(2025,8,27,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"61", "61", "Demo Person 061", #datetime(2025,8,31,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"62", "62", "Demo Person 062", #datetime(2025,9,4,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"63", "63", "Demo Person 063", #datetime(2025,9,8,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"64", "64", "Demo Person 064", #datetime(2025,9,12,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"65", "65", "Demo Person 065", #datetime(2025,9,16,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"66", "66", "Demo Person 066", #datetime(2025,9,20,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"67", "67", "Demo Person 067", #datetime(2025,9,24,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"68", "68", "Demo Person 068", #datetime(2025,9,28,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"69", "69", "Demo Person 069", #datetime(2025,10,2,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"70", "70", "Demo Person 070", #datetime(2025,10,6,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"71", "71", "Demo Person 071", #datetime(2025,10,10,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"72", "72", "Demo Person 072", #datetime(2025,10,14,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"73", "73", "Demo Person 073", #datetime(2025,10,18,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"74", "74", "Demo Person 074", #datetime(2025,10,22,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"75", "75", "Demo Person 075", #datetime(2025,10,26,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"76", "76", "Demo Person 076", #datetime(2025,10,30,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"77", "77", "Demo Person 077", #datetime(2025,11,3,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"78", "78", "Demo Person 078", #datetime(2025,11,7,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"79", "79", "Demo Person 079", #datetime(2025,11,11,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"80", "80", "Demo Person 080", #datetime(2025,11,15,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"81", "81", "Demo Person 081", #datetime(2025,11,19,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"82", "82", "Demo Person 082", #datetime(2025,11,23,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"83", "83", "Demo Person 083", #datetime(2025,11,27,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"84", "84", "Demo Person 084", #datetime(2025,12,1,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"85", "85", "Demo Person 085", #datetime(2025,12,5,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"86", "86", "Demo Person 086", #datetime(2025,12,9,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"87", "87", "Demo Person 087", #datetime(2025,12,13,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"88", "88", "Demo Person 088", #datetime(2025,12,17,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"89", "89", "Demo Person 089", #datetime(2025,12,21,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"90", "90", "Demo Person 090", #datetime(2025,12,25,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"91", "91", "Demo Person 091", #datetime(2025,12,29,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"92", "92", "Demo Person 092", #datetime(2026,1,2,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"93", "93", "Demo Person 093", #datetime(2026,1,6,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"94", "94", "Demo Person 094", #datetime(2026,1,10,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"95", "95", "Demo Person 095", #datetime(2026,1,14,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"96", "96", "Demo Person 096", #datetime(2026,1,18,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"97", "97", "Demo Person 097", #datetime(2026,1,22,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"98", "98", "Demo Person 098", #datetime(2026,1,26,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"99", "99", "Demo Person 099", #datetime(2026,1,30,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"100", "100", "Demo Person 100", #datetime(2026,2,3,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"101", "101", "Demo Person 101", #datetime(2026,2,7,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"102", "102", "Demo Person 102", #datetime(2026,2,11,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"103", "103", "Demo Person 103", #datetime(2026,2,15,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"104", "104", "Demo Person 104", #datetime(2026,2,19,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"105", "105", "Demo Person 105", #datetime(2026,2,23,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"106", "106", "Demo Person 106", #datetime(2026,2,27,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"107", "107", "Demo Person 107", #datetime(2026,3,3,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"108", "108", "Demo Person 108", #datetime(2026,3,7,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"},
+				{"109", "109", "Demo Person 109", #datetime(2026,3,11,0,0,0), "G1", "G1", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"110", "110", "Demo Person 110", #datetime(2026,3,15,0,0,0), "G2", "G2", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"111", "111", "Demo Person 111", #datetime(2026,3,19,0,0,0), "G3", "G3", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"112", "112", "Demo Person 112", #datetime(2026,3,23,0,0,0), "G4", "G4", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"113", "113", "Demo Person 113", #datetime(2026,3,27,0,0,0), "G1", "G1", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"114", "114", "Demo Person 114", #datetime(2026,3,31,0,0,0), "G2", "G2", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Foreign"},
+				{"115", "115", "Demo Person 115", #datetime(2026,4,4,0,0,0), "G3", "G3", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"116", "116", "Demo Person 116", #datetime(2026,4,8,0,0,0), "G4", "G4", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Local"},
+				{"117", "117", "Demo Person 117", #datetime(2026,4,12,0,0,0), "G1", "G1", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Foreign"},
+				{"118", "118", "Demo Person 118", #datetime(2026,4,16,0,0,0), "G2", "G2", "S1", "S1", "Demo Lead 1", "Demo Lead 1", "Demo Department 1", "Active", null, "Indirect", "Synthetic demo", "Employee", "IDL", "Local"},
+				{"119", "119", "Demo Person 119", #datetime(2026,4,20,0,0,0), "G3", "G3", "S2", "S2", "Demo Lead 2", "Demo Lead 2", "Demo Department 2", "Active", null, "Direct", "Synthetic demo", "Employee", "DL", "Local"},
+				{"120", "120", "Demo Person 120", #datetime(2026,4,24,0,0,0), "G4", "G4", "S3", "S3", "Demo Lead 3", "Demo Lead 3", "Demo Department 3", "Active", null, "Indirect", "Synthetic demo", "Contingent Worker", "IDL", "Foreign"}
+			})
